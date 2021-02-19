@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: transparent;
+}
+
+body {
+  --main-color: #f7f0ea;
+  --main-color-dark: #f0bb81;
+
+  --second-color: #142c51;
+  --second-color-light: #e9f2f1;
+  --second-color-dark: #101b27;
+
+  width: 100%;
+  display: flex;
+}
+
+/* ---------- left and right bars ---------- */
+nav,
+aside {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  width: 4vw;
+  border-right: solid 1px var(--second-color);
+}
+
+aside {
+  width: 8vw;
+  border-left: solid 1px var(--second-color);
+}
+
+nav > button,
+aside > button {
+  color: var(--main-color-dark);
+  font-weight: bold;
+}
+
+nav > button {
+  position: absolute;
+  margin-left: 4%;
+}
+
+/* ---------- main ---------- */
+main {
+  width: 88vw;
+}
+
+/* ---------- main header ---------- */
+main > header {
+  height: 100vh;
+  margin: 0 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main > header > hgroup {
+  margin-top: 10%;
+  display: flex;
+}
+
+main > header > hgroup > h1 {
+  margin-right: 10%;
+}
+
+/* ---------- main articles ---------- */
+main > section > header {
+  background-color: var(--main-color-dark);
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+main > section > article {
+  height: 100vh;
+  padding-top: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+main > section > article > section {
+  width: 50%;
+}
+
+main > section > article > div {
+  width: 20%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  
+}
+main > section > article:nth-of-type(1) > div {
+  background-color: var(--second-color);
+}
+main > section > article:nth-of-type(2) > div {
+  background-color: var(--second-color-light);
+}
+main > section > article:nth-of-type(3) > div {
+  background-color: var(--second-color-dark);
+}
+
+main > section > article > div > img {
+  width: 180%;
+  height: 50%;  
+}
+main > section > article:nth-of-type(1) > div > img,
+main > section > article:nth-of-type(3) > div > img {
+  margin-left: 6vw;
+}
+main > section > article:nth-of-type(2) > div > img {
+  margin-left: -6vw;
+}
