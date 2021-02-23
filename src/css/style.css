@@ -33,26 +33,25 @@ nav {
   width: 4vw;
   border-right: solid 1px var(--second-color);
 }
-
-aside {
-  width: 8vw;
-  border-left: solid 1px var(--second-color);
-}
-
-nav > menu,
-aside > button {
+nav > menu {
   color: var(--main-color-dark);
   font-weight: bold;
-}
-
-nav > menu {
   position: absolute;
   margin-left: 4%;
 }
 
+aside {
+  width: 4vw;
+  border-left: solid 1px var(--second-color);
+}
+aside > a > img {
+  width: 2.5vw;
+  margin-bottom: 1vh;
+}
+
 /* ---------- main ---------- */
 main {
-  width: 88vw;
+  width: 92vw;
   background-color: var(--second-color-light);
 }
 
