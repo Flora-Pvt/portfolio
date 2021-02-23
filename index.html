@@ -11,9 +11,9 @@
   <body>
     <nav>
       <menu>
-        <li>- 1</li>
-        <li>- 2</li>
-        <li>- 3</li>
+        <li><a href="index.html#work1">- 1</a></li>
+        <li><a href="index.html#work2">- 2</a></li>
+        <li><a href="index.html#work3">- 3</a></li>
       </menu>
     </nav>
 
@@ -23,22 +23,24 @@
           <h1>Flora Preuvot</h1>
           <h2>Développeuse Web front-end</h2>
         </hgroup>
-        <button>Contactez-moi</button>
+        <a href="mailto:f-preuvot@outlook.com">
+          <button>Contactez-moi</button>
+        </a>
 
         <!-- Icon made by https://www.flaticon.com/authors/lyolya -->
-        <button>
+        <a href="index.html#works">
           Mes travaux
           <img
             alt="flèche vers le bas"
             src="./src/static/icons/down-arrow.svg"
           />
-        </button>
+        </a>
       </header>
 
-      <section>
-        <header><h2>Mes réalisations</h2></header>
+      <section id="works">
+        <header><h2>Flora Preuvot - Mes réalisations</h2></header>
 
-        <article>
+        <article id="work1">
           <div>
             <img
               src="./src/static/images/04.jpg"
@@ -58,7 +60,7 @@
           </section>
         </article>
 
-        <article>
+        <article id="work2">
           <section>
             <h3>Lorem ipsum</h3>
             <p>
@@ -78,7 +80,7 @@
           </div>
         </article>
 
-        <article>
+        <article id="work3">
           <div>
             <img
               src="./src/static/images/05.jpg"
@@ -101,16 +103,18 @@
     </main>
 
     <aside>
-      <a>
+      <a href="mailto:f-preuvot@outlook.com">
         <!-- Icon made by https://www.flaticon.com/authors/gregor-cresnar -->
         <img src="./src/static/icons/envelope.svg" alt="envelope" />
       </a>
-      <a
+      <a href="https://github.com/Flora-Pvt" target="_blank"
         ><img
           src="./src/static/icons/GitHub-Mark-120px-plus.png"
           alt="logo GitHub"
       /></a>
-      <a><img src="./src/static/icons/LI-In-Bug.png" alt="logo Linkedin" /></a>
+      <a href="https://www.linkedin.com/in/flora-preuvot/" target="_blank"
+        ><img src="./src/static/icons/LI-In-Bug.png" alt="logo Linkedin"
+      /></a>
     </aside>
   </body>
 </html>

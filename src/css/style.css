@@ -3,6 +3,8 @@
   padding: 0;
   list-style: none;
   background-color: transparent;
+  color: inherit;
+  text-decoration: none;
 
   --main-color: #f7f0ea;
   --main-color-dark: #f0bb81;
@@ -23,12 +25,21 @@ body {
   font-size: 12px;
 }
 
+nav > menu {
+  color: var(--main-color-dark);
+  font-weight: bold;
+  font-size: clamp(1rem, 1.4vw, 1.5rem);
+}
+
 h1 {
-  font-size: clamp(2rem,6.5vw,6rem);
+  font-size: clamp(2rem, 6.5vw, 6rem);
   text-decoration: underline;
 }
 
-/* ---------- typography ---------- */
+main > header > a > button:nth-of-type(1) {
+  font-size: clamp(1rem, 1.4vw, 1.5rem);
+  font-weight: bold;
+}
 
 /* ---------- left and right bars ---------- */
 nav,
@@ -44,10 +55,9 @@ aside {
 nav {
   width: 4vw;
   border-right: solid 1px var(--second-color);
+  z-index: 1;
 }
 nav > menu {
-  color: var(--main-color-dark);
-  font-weight: bold;
   margin-left: 5vw;
   width: 2vw;
 }
@@ -91,14 +101,21 @@ main > header > hgroup > h2 {
   align-self: flex-end;
 }
 
-
-main > header > button:nth-of-type(1) {
+main > header > a > button:nth-of-type(1) {
   width: 20vw;
+  height: 5vh;
+  border: solid var(--second-color-dark) 2px;
+  border-radius: 10px / 30px;
 }
 
-main > header > button > img {
+main > header > a:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main > header > a > img {
   width: 30px;
-  align-self: center;
+  margin: 0 40px 0 10px;
 }
 
 /* ---------- main articles ---------- */
