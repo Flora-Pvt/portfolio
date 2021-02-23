@@ -3,21 +3,32 @@
   padding: 0;
   list-style: none;
   background-color: transparent;
-}
 
-body {
   --main-color: #f7f0ea;
   --main-color-dark: #f0bb81;
 
   --second-color: #142c51;
   --second-color-light: #e9f2f1;
   --second-color-dark: #101b27;
+}
 
-  color: var(--second-color-dark);
-
+body {
   width: 100%;
   display: flex;
 }
+
+/* ---------- typography ---------- */
+body {
+  color: var(--second-color-dark);
+  font-size: 12px;
+}
+
+h1 {
+  font-size: clamp(2rem,6.5vw,6rem);
+  text-decoration: underline;
+}
+
+/* ---------- typography ---------- */
 
 /* ---------- left and right bars ---------- */
 nav,
@@ -61,23 +72,28 @@ main {
 /* ---------- main header ---------- */
 main > header {
   height: 100vh;
-  margin: 0 10%;
+  margin: 0 5vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 main > header > hgroup {
-  margin-top: 10%;
+  margin-top: 5vh;
   display: flex;
 }
-
 main > header > hgroup > h1 {
-  margin-right: 10%;
+  margin-right: 5vw;
+  width: 20vw;
+}
+main > header > hgroup > h2 {
+  width: 10vw;
+  align-self: flex-end;
 }
 
+
 main > header > button:nth-of-type(1) {
-  width: 50%;
+  width: 20vw;
 }
 
 main > header > button > img {
