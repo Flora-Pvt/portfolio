@@ -27,6 +27,7 @@ aside {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: fixed;
 }
 
 nav {
@@ -36,11 +37,12 @@ nav {
 nav > menu {
   color: var(--main-color-dark);
   font-weight: bold;
-  position: absolute;
-  margin-left: 4%;
+  margin-left: 5vw;
+  width: 2vw;
 }
 
 aside {
+  right: 0;
   width: 4vw;
   border-left: solid 1px var(--second-color);
 }
@@ -51,7 +53,8 @@ aside > a > img {
 
 /* ---------- main ---------- */
 main {
-  width: 92vw;
+  width: 91vw;
+  margin-left: 4vw;
   background-color: var(--second-color-light);
 }
 
