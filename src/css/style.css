@@ -17,6 +17,7 @@
 body {
   width: 100%;
   display: flex;
+  background-color: var(--second-color-light);
 }
 
 /* ---------- typography ---------- */
@@ -26,9 +27,9 @@ body {
 }
 
 nav > menu {
-  color: var(--main-color-dark);
   font-weight: bold;
   font-size: clamp(1rem, 1.4vw, 1.5rem);
+  color: var(--main-color-dark)
 }
 
 h1 {
@@ -43,6 +44,7 @@ main > header > a > button:nth-of-type(1) {
 
 main > section > header > h2 {
   font-size: clamp(1rem, 1.6vw, 2rem);
+  color: var(--main-color-dark)
 }
 
 /* ---------- left and right bars ---------- */
@@ -54,33 +56,32 @@ aside {
   justify-content: center;
   align-items: center;
   position: fixed;
+  z-index: 2;
 }
 
 nav {
-  width: 4vw;
+  width: 2vw;
   border-right: solid 1px var(--second-color);
-  z-index: 1;
 }
 nav > menu {
-  margin-left: 5vw;
+  margin-left: 3vw;
   width: 2vw;
 }
 
 aside {
   right: 0;
-  width: 4vw;
+  width: 2vw;
   border-left: solid 1px var(--second-color);
 }
 aside > a > img {
-  width: 2.5vw;
+  width: 1.8vw;
   margin-bottom: 1vh;
 }
 
 /* ---------- main ---------- */
 main {
-  width: 91vw;
-  margin-left: 4vw;
-  background-color: var(--second-color-light);
+  width: 95vw;
+  margin-left: 2vw;
 }
 
 /* ---------- main header ---------- */
@@ -124,19 +125,19 @@ main > header > a > img {
 
 /* ---------- main articles ---------- */
 main > section > header {
-  background-color: var(--main-color-dark);
-  position: absolute;
-  margin-left: -4vw;
-  width: 98.99vw;
-  z-index: 2;
-  position: sticky;
+  background-color: var(--second-color);
+  left: 0;
   top: 0;
+  position: sticky;
+  width: 100%;
+  height: 2vw;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
 }
 
 main > section > header > h2 {
-  margin: 0 5vw;
+  margin: 0 2vw;
 }
 
 main > section > article {
