@@ -41,6 +41,10 @@ main > header > a > button:nth-of-type(1) {
   font-weight: bold;
 }
 
+main > section > header > h2 {
+  font-size: clamp(1rem, 1.6vw, 2rem);
+}
+
 /* ---------- left and right bars ---------- */
 nav,
 aside {
@@ -122,8 +126,17 @@ main > header > a > img {
 main > section > header {
   background-color: var(--main-color-dark);
   position: absolute;
-  right: 0;
-  width: 100%;
+  margin-left: -4vw;
+  width: 98.99vw;
+  z-index: 2;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+main > section > header > h2 {
+  margin: 0 5vw;
 }
 
 main > section > article {
