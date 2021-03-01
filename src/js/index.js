@@ -6,13 +6,16 @@ ScrollTrigger.defaults({
   // markers: true,
 });
 
-gsap.to("#sign1", {
+const signs = document.querySelectorAll(".sign")
+console.log(signs);
+
+gsap.to(signs, {
   scrollTrigger: "#work1",
   y: 600,
   ease: "power1.inOut",
 });
 
-gsap.to("#sign1", {
+gsap.to(signs, {
   scrollTrigger: {
     trigger: "#work2",
   },
@@ -20,7 +23,7 @@ gsap.to("#sign1", {
   ease: "power1.inOut",
 });
 
-gsap.to("#sign1", {
+gsap.to(signs, {
   scrollTrigger: "#work3",
   y: 2600,
   ease: "power1.inOut",

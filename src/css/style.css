@@ -85,19 +85,12 @@ main > section > article > section > p {
   100% { transform: rotate(360deg); }
 }
 
-#animation {
-  top: 0;
-  left: 0;
-  position: absolute;
-  height: 500vh;
-  width: 98vw;
-}
-
 body > section > img {
   width: 100px;
   height: 100px;
-  animation: infinite-rotate 10s linear infinite;
+  /* animation: infinite-rotate 10s linear infinite; */
   position: absolute;
+  z-index: 1;
 }
 
 #sign1 {
@@ -154,7 +147,7 @@ aside {
   justify-content: center;
   align-items: center;
   position: fixed;
-  z-index: 3;
+  z-index: 2;
 }
 
 nav {
@@ -181,7 +174,7 @@ aside > a > img {
 main {
   width: 95%;
   margin-left: 2.5vw;
-  z-index: 1;
+
 }
 
 /* ---------- main header ---------- */
@@ -228,7 +221,7 @@ main > section > header {
   position: sticky;
   width: 100%;
   height: 2.5vw;
-  z-index: 2;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
