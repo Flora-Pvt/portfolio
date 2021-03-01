@@ -78,6 +78,73 @@ main > section > article > section > p {
   font-size: clamp(1rem, 1.6vw, 2rem);
 }
 
+
+/* ---------- animation ---------- */
+@keyframes infinite-rotate {  
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#animation {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 500vh;
+  width: 98vw;
+}
+
+body > section > img {
+  width: 100px;
+  height: 100px;
+  animation: infinite-rotate 10s linear infinite;
+  position: absolute;
+}
+
+#sign1 {
+  margin-top: 40vh;
+  margin-left: 20vw;
+}
+
+#sign2 {
+  margin-top: 40vh;
+  margin-left: 40vw;
+}
+
+#sign3 {
+  margin-top: 60vh;
+  margin-left: 50vw;
+}
+
+#sign4 {
+  margin-top: 70vh;
+  margin-left: 80vw;
+}
+
+#sign5 {
+  margin-top: 10vh;
+  margin-left: 40vw;
+}
+
+#sign6 {
+  margin-top: 80vh;
+  margin-left: 20vw;
+}
+
+#sign7 {
+  margin-top: 10vh;
+  margin-left: 80vw;
+}
+
+#sign8 {
+  margin-top: 40vh;
+  margin-left: 60vw;
+}
+
+#sign9 {
+  margin-top: 70vh;
+  margin-left: 70vw;
+}
+
 /* ---------- left and right bars ---------- */
 nav,
 aside {
@@ -107,25 +174,6 @@ aside {
 aside > a > img {
   width: 1.8vw;
   margin-bottom: 1vh;
-}
-
-
-/* ---------- animation ---------- */
-#animation {
-  top: 0;
-  left: 0;
-  position: absolute;
-  height: 500vh;
-  width: 98vw;
-}
-
-#ball {
-  background-color: var(--second-color);
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  margin-top: 50vh;
-  margin-left: 50vw;
 }
 
 

@@ -6,13 +6,13 @@ ScrollTrigger.defaults({
   // markers: true,
 });
 
-gsap.to("#ball", {
+gsap.to("#sign1", {
   scrollTrigger: "#work1",
   y: 600,
   ease: "power1.inOut",
 });
 
-gsap.to("#ball", {
+gsap.to("#sign1", {
   scrollTrigger: {
     trigger: "#work2",
   },
@@ -20,7 +20,7 @@ gsap.to("#ball", {
   ease: "power1.inOut",
 });
 
-gsap.to("#ball", {
+gsap.to("#sign1", {
   scrollTrigger: "#work3",
   y: 2600,
   ease: "power1.inOut",
