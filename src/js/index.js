@@ -14,8 +14,10 @@ const equal = document.querySelectorAll("#equal")
 const parenthesis = document.querySelectorAll("#parenthesis")
 const parenthesisEnd = document.querySelectorAll("#parenthesis-end")
 const semicolon = document.querySelectorAll("#semicolon")
-const tag = document.querySelectorAll("#tag")
-const tagEnd = document.querySelectorAll("#tag-end")
+const tag = document.querySelector("#tag")
+const tagEnd = document.querySelector("#tag-end")
+
+console.log(tag);
 
 gsap.to(signs, {
   scrollTrigger: "#work1",
