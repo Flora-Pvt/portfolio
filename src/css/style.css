@@ -93,47 +93,47 @@ body > section > img {
   z-index: 1;
 }
 
-#sign1 {
+#accolade-end {
   margin-top: 40vh;
   margin-left: 20vw;
 }
 
-#sign2 {
+#accolade {
   margin-top: 40vh;
   margin-left: 40vw;
 }
 
-#sign3 {
+#bracket {
   margin-top: 60vh;
   margin-left: 50vw;
 }
 
-#sign4 {
+#equal {
   margin-top: 70vh;
   margin-left: 80vw;
 }
 
-#sign5 {
+#parenthesis {
   margin-top: 10vh;
   margin-left: 40vw;
 }
 
-#sign6 {
+#parenthesis-end {
   margin-top: 80vh;
   margin-left: 20vw;
 }
 
-#sign7 {
+#semicolon {
   margin-top: 10vh;
   margin-left: 80vw;
 }
 
-#sign8 {
+#tag {
   margin-top: 40vh;
   margin-left: 60vw;
 }
 
-#sign9 {
+#tag-end {
   margin-top: 70vh;
   margin-left: 70vw;
 }
