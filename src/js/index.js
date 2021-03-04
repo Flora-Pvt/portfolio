@@ -26,7 +26,7 @@ document.addEventListener("scroll", () => {
 });
 
 
-const hoverAnimation = document.querySelectorAll(".hoverAnimation");
+/* const hoverAnimation = document.querySelectorAll(".hoverAnimation");
 const tag = document.querySelectorAll(".tag");
 
 for (let i = 0; i < hoverAnimation.length / 3; i++) {
@@ -49,7 +49,7 @@ for (let i = 0; i < hoverAnimation.length / 3; i++) {
   hoverAnimation[i + 2].addEventListener("mouseleave", (e) => {
     tag[i].style.opacity = 0;
   });
-}
+}*/
 
 
 // const discoverBtn = document.querySelectorAll(".discoverBtn");

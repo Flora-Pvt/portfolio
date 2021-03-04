@@ -3,9 +3,9 @@
     <tspan>&lt;</tspan>
   </text>
   <svg class="eyes">
-    <circle cx="163" cy="95" r="17" stroke="black" fill="white" stroke-width="3" />
-    <circle cx="163" cy="95" r="7" stroke="black" fill="black" stroke-width="3" />
-    <circle cx="195" cy="85" r="17" stroke="black" fill="white" stroke-width="3" />    
-    <circle cx="195" cy="85" r="7" stroke="black" fill="black" stroke-width="3" />
+    <circle cx="163" cy="75" r="17" stroke="black" fill="white" stroke-width="3" />
+    <circle cx="163" cy="75" r="6" stroke="black" fill="black" stroke-width="3" />
+    <circle cx="195" cy="60" r="17" stroke="black" fill="white" stroke-width="3" />    
+    <circle cx="195" cy="60" r="6" stroke="black" fill="black" stroke-width="3" />
   </svg>
 </svg>
