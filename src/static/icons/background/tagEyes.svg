@@ -1,0 +1,11 @@
+<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+  <text x="100" y="200" font-size="233" font-weight="bolder" fill="#86A9CE">
+    <tspan>&lt;</tspan>
+  </text>
+  <svg class="eyes">
+    <circle cx="163" cy="95" r="17" stroke="black" fill="white" stroke-width="3" />
+    <circle cx="163" cy="95" r="7" stroke="black" fill="black" stroke-width="3" />
+    <circle cx="195" cy="85" r="17" stroke="black" fill="white" stroke-width="3" />    
+    <circle cx="195" cy="85" r="7" stroke="black" fill="black" stroke-width="3" />
+  </svg>
+</svg>

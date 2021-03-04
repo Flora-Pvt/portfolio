@@ -75,7 +75,7 @@ main > section > article > section > p {
   font-size: clamp(1rem, 1.6vw, 2rem);
 }
 
-/* ---------- animations ---------- */
+/* ---------- background signs ---------- */
 @keyframes infiniteRotate {
   0% {
     transform: rotate(0deg);
@@ -85,9 +85,7 @@ main > section > article > section > p {
   }
 }
 
-body > img,
-body > svg,
-body > object {
+body > img {
   width: 13vh;
   height: 13vh;
   position: absolute;
@@ -256,6 +254,26 @@ main > section > article > section > p {
   margin-bottom: 4vh;
 }
 
+@keyframes pointing {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+main > section > article > section > img {
+  width: 10vw;
+  height: 10vw;
+  opacity: 0;
+  rotate: 340deg;
+  margin-bottom: -7vh;
+  animation: pointing 0.6s ease-in-out infinite;
+}
+
 main > section > article > div {
   width: 30vw;
   height: 75vh;
@@ -278,6 +296,7 @@ main > section > article > div > img {
   width: 35vw;
   height: 50vh;
   position: absolute;
+  object-fit: cover;
 }
 main > section > article:nth-of-type(1) > div > img,
 main > section > article:nth-of-type(3) > div > img {
