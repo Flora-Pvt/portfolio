@@ -1,3 +1,19 @@
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-color: #f7f0ea;
+  --main-color-dark: #eba356;
+
+  --second-color: #142c51;
+  --second-color-light: #e9f2f1;
+  --second-color-dark: #101b27;
+
+  --accent-color: #c3dcd9;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,13 +22,6 @@
   color: inherit;
   text-decoration: none;
   font-family: inherit;
-
-  --main-color: #f7f0ea;
-  --main-color-dark: #f0bb81;
-
-  --second-color: #142c51;
-  --second-color-light: #e9f2f1;
-  --second-color-dark: #101b27;
 }
 
 body {
@@ -21,40 +30,27 @@ body {
   background-color: var(--main-color);
 }
 
-button {
-  width: 10vw;
-  height: 5vh;
-  border: solid var(--second-color-dark) 2px;
-  border-radius: 10px / 30px;
-}
-
 /* ---------- typography ---------- */
 @font-face {
-  font-family: "Ramona";
-  src: url("../../src/static/fonts/Ramona/Ramona-Light.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Ramona-Bold";
-  src: url("../../src/static/fonts/Ramona/Ramona-Bold.ttf") format("truetype");
+  font-family: "Dosis";
+  src: url("../../src/static/fonts/Dosis-Regular.ttf") format("truetype");
 }
 
 body {
   color: var(--second-color-dark);
-  font-size: 12px;
-  font-family: "Ramona", "Segoe UI Black", "Arial Rounded MT Bold", sans-serif;
+  font-size: 16px;
+  font-family: "Dosis", "Segoe UI Black", "Arial Rounded MT Bold", sans-serif;
 }
 
 nav > menu {
   font-weight: bold;
   font-size: clamp(1rem, 1.4vw, 1.5rem);
-  color: var(--main-color-dark);
 }
 
 main > header > hgroup > h1 {
   font-size: clamp(2rem, 7vw, 7rem);
   text-decoration: underline;
-  font-family: "Ramona", "Segoe UI Black", "Arial Rounded MT Bold", sans-serif;
+  font-family: "Dosis", "Segoe UI Black", "Arial Rounded MT Bold", sans-serif;
 }
 main > header > a > button:nth-of-type(1) {
   font-size: clamp(1rem, 1.4vw, 1.5rem);
@@ -63,7 +59,6 @@ main > header > a > button:nth-of-type(1) {
 
 main > section > header > h2 {
   font-size: clamp(1rem, 1.6vw, 2rem);
-  color: var(--second-color);
 }
 main > section > article > section > h3 {
   font-size: clamp(1rem, 1.6vw, 2rem);
@@ -71,6 +66,59 @@ main > section > article > section > h3 {
 }
 main > section > article > section > p {
   font-size: clamp(1rem, 1.6vw, 2rem);
+}
+
+/* ---------- background signs ---------- */
+body > img {
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  z-index: 1;
+}
+
+#accolade-end {
+  margin-top: 40vh;
+  margin-left: 80vw;
+}
+
+#accolade {
+  margin-top: 40vh;
+  margin-left: 40vw;
+}
+
+#bracket {
+  margin-top: 60vh;
+  margin-left: 50vw;
+}
+
+#equal {
+  margin-top: 70vh;
+  margin-left: 80vw;
+}
+
+#parenthesis {
+  margin-top: 10vh;
+  margin-left: 40vw;
+}
+
+#parenthesis-end {
+  margin-top: 80vh;
+  margin-left: 20vw;
+}
+
+#semicolon {
+  margin-top: 10vh;
+  margin-left: 80vw;
+}
+
+#tag {
+  margin-top: 40vh;
+  margin-left: 60vw;
+}
+
+#tag-end {
+  margin-top: 70vh;
+  margin-left: 70vw;
 }
 
 /* ---------- left and right bars ---------- */
@@ -87,17 +135,20 @@ aside {
 
 nav {
   width: 2.5%;
-  border-right: solid 1px var(--second-color);
+  border-right: solid 1px var(--main-color-dark);
 }
 nav > menu {
   margin-left: 3vw;
   width: 30px;
 }
+nav > menu > li > a > span {
+  margin-left: 3px;
+}
 
 aside {
   right: 0;
   width: 2.5%;
-  border-left: solid 1px var(--second-color);
+  border-left: solid 1px var(--main-color-dark);
 }
 aside > a > img {
   width: 1.8vw;
@@ -134,21 +185,27 @@ main > header > hgroup > h2 {
 
 main > header > a > button:nth-of-type(1) {
   width: 30vw;
+  height: 72px;
+  border: solid var(--second-color-dark) 2px;
+  border-radius: 10px / 30px;
 }
 
 main > header > a:nth-of-type(2) {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 main > header > a > img {
-  width: 30px;
-  margin: 0 40px 0 10px;
+  height: 30px;
+  margin-top: 10px;
 }
 
-/* ---------- main works articles ---------- */
+/* ---------- works ---------- */
 main > section > header {
-  background-color: var(--main-color-dark);
+  background-color: var(--main-color);
+  border-bottom: var(--main-color-dark) 1px solid;
+  border-top: var(--main-color-dark) 1px solid;
   left: 0;
   top: 0;
   position: sticky;
@@ -165,9 +222,9 @@ main > section > header > h2 {
 }
 
 main > section > article {
-  height: 100vh;
-  padding: 10vh 0;
+  height: 80vh;
   display: flex;
+  padding: 10vh 0;
 }
 
 main > section > article > section {
@@ -192,20 +249,21 @@ main > section > article > div {
   position: relative;
 }
 main > section > article:nth-of-type(1) > div {
-  background-color: var(--second-color);
+  background-color: #f0bb81;
 }
 main > section > article:nth-of-type(2) > div {
-  background-color: var(--second-color-light);
+  background-color: #86a9ce;
   margin-left: 20vw;
 }
 main > section > article:nth-of-type(3) > div {
-  background-color: var(--second-color-dark);
+  background-color: #c3dcd9;
 }
 
 main > section > article > div > img {
   width: 35vw;
   height: 50vh;
   position: absolute;
+  object-fit: cover;
 }
 main > section > article:nth-of-type(1) > div > img,
 main > section > article:nth-of-type(3) > div > img {
@@ -213,4 +271,53 @@ main > section > article:nth-of-type(3) > div > img {
 }
 main > section > article:nth-of-type(2) > div > img {
   right: 5vw;
+}
+
+/* ---------- works : discover buttons ---------- */
+.button {
+  border: none;
+  padding: 1.5rem 3rem;
+  position: relative;
+  display: inline-block;
+}
+.button::before,
+.button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.button--surtur {
+  padding: 0;
+  clip-path: circle(40% at 50% 50%);
+}
+
+.textcircle {
+  position: relative;
+  display: block;
+  width: 200px;
+}
+
+.textcircle textPath {
+  letter-spacing: 17px;
+}
+
+.button--surtur:hover .textcircle {
+  animation: rotateIt 7s linear infinite;
+}
+
+.middleText {
+  fill: var(--second-color-dark);
+  position: absolute;
+  top: calc(35%);
+  left: calc(30%);
+  border: solid var(--second-color-dark) 2px;
+  border-radius: 10px / 30px;
+}
+
+@keyframes rotateIt {
+  to {
+    transform: rotate(-360deg);
+  }
 }

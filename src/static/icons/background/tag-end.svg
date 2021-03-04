@@ -1,0 +1,12 @@
+<!--><svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+  <text x="100" y="200" font-size="233" font-family="Arial" fill="#142c51">
+    <tspan>&gt;</tspan>
+  </text></svg>*/-->
+<svg height="50" width="50" xmlns="http://www.w3.org/2000/svg">
+  <line x1="5" x2="45" y1="25" y2="5" stroke="blue" fill="transparent" stroke-width="8" />
+  <line x1="5" x2="45" y1="25" y2="45" stroke="blue" fill="transparent" stroke-width="8" />
+  <circle cx="25" cy="12" r="7" stroke="black" fill="white" stroke-width="3" />
+  <circle cx="40" cy="10" r="7" stroke="black" fill="white" stroke-width="3" />
+  <circle cx="25" cy="12" r="1" stroke="black" fill="black" stroke-width="3" />
+  <circle cx="40" cy="10" r="1" stroke="black" fill="black" stroke-width="3" />
+</svg>

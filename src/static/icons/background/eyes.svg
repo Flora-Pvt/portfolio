@@ -1,0 +1,6 @@
+  <svg class="eyes" opacity="0">
+    <circle cx="25" cy="12" r="7" stroke="black" fill="white" stroke-width="3" />
+    <circle cx="40" cy="10" r="7" stroke="black" fill="white" stroke-width="3" />
+    <circle cx="25" cy="12" r="1" stroke="black" fill="black" stroke-width="3" />
+    <circle cx="40" cy="10" r="1" stroke="black" fill="black" stroke-width="3" />
+  </svg>
