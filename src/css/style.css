@@ -88,11 +88,11 @@ main > section > article > section > p {
 body > img,
 body > svg,
 body > object {
-  width: 100px;
-  height: 100px;
+  width: 13vh;
+  height: 13vh;
   position: absolute;
   z-index: 1;
-  animation: infiniteRotate 20s linear infinite;
+  /*animation: infiniteRotate 20s linear infinite;*/
 }
 
 #accolade-end {
