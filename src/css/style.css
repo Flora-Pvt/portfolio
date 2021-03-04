@@ -5,11 +5,13 @@ html {
 
 :root {
   --main-color: #f7f0ea;
-  --main-color-dark: #f0bb81;
+  --main-color-dark: #eba356;
 
   --second-color: #142c51;
   --second-color-light: #e9f2f1;
   --second-color-dark: #101b27;
+
+  --accent-color: #c3dcd9;
 }
 
 * {
@@ -43,14 +45,13 @@ button {
 
 body {
   color: var(--second-color-dark);
-  font-size: 12px;
+  font-size: 16px;
   font-family: "Dosis", "Segoe UI Black", "Arial Rounded MT Bold", sans-serif;
 }
 
 nav > menu {
   font-weight: bold;
   font-size: clamp(1rem, 1.4vw, 1.5rem);
-  color: var(--main-color-dark);
 }
 
 main > header > hgroup > h1 {
@@ -65,7 +66,6 @@ main > header > a > button:nth-of-type(1) {
 
 main > section > header > h2 {
   font-size: clamp(1rem, 1.6vw, 2rem);
-  color: var(--second-color);
 }
 main > section > article > section > h3 {
   font-size: clamp(1rem, 1.6vw, 2rem);
@@ -75,13 +75,24 @@ main > section > article > section > p {
   font-size: clamp(1rem, 1.6vw, 2rem);
 }
 
+/* ---------- animations ---------- */
+@keyframes infiniteRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
-/* ---------- animation ---------- */
-body > img, body > svg, body > object {
-  width: 50px;
-  height: 50px;
+body > img,
+body > svg,
+body > object {
+  width: 100px;
+  height: 100px;
   position: absolute;
   z-index: 1;
+  animation: infiniteRotate 20s linear infinite;
 }
 
 #accolade-end {
@@ -143,7 +154,7 @@ aside {
 
 nav {
   width: 2.5%;
-  border-right: solid 1px var(--second-color);
+  border-right: solid 1px var(--main-color-dark);
 }
 nav > menu {
   margin-left: 3vw;
@@ -153,19 +164,17 @@ nav > menu {
 aside {
   right: 0;
   width: 2.5%;
-  border-left: solid 1px var(--second-color);
+  border-left: solid 1px var(--main-color-dark);
 }
 aside > a > img {
   width: 1.8vw;
   margin-bottom: 1vh;
 }
 
-
 /* ---------- main ---------- */
 main {
   width: 95%;
   margin-left: 2.5vw;
-
 }
 
 /* ---------- main header ---------- */
@@ -196,17 +205,20 @@ main > header > a > button:nth-of-type(1) {
 
 main > header > a:nth-of-type(2) {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 main > header > a > img {
-  width: 30px;
-  margin: 0 40px 0 10px;
+  height: 30px;
+  margin-top: 10px;
 }
 
 /* ---------- works ---------- */
 main > section > header {
-  background-color: var(--main-color-dark);
+  background-color: var(--main-color);
+  border-bottom: var(--main-color-dark) 1px solid;
+  border-top: var(--main-color-dark) 1px solid;
   left: 0;
   top: 0;
   position: sticky;
@@ -224,8 +236,10 @@ main > section > header > h2 {
 
 main > section > article {
   height: 100vh;
-  padding: 10vh 0;
   display: flex;
+}
+main > section > article:first-of-type {
+  padding: 10vh 0;
 }
 
 main > section > article > section {
@@ -250,14 +264,14 @@ main > section > article > div {
   position: relative;
 }
 main > section > article:nth-of-type(1) > div {
-  background-color: var(--second-color);
+  background-color: #f0bb81;
 }
 main > section > article:nth-of-type(2) > div {
-  background-color: var(--second-color-light);
+  background-color: #86a9ce;
   margin-left: 20vw;
 }
 main > section > article:nth-of-type(3) > div {
-  background-color: var(--second-color-dark);
+  background-color: #C3DCD9;
 }
 
 main > section > article > div > img {
