@@ -73,7 +73,6 @@ body > img {
   width: 10vh;
   height: 10vh;
   position: absolute;
-  z-index: 1;
 }
 
 #accolade-end {
@@ -188,6 +187,7 @@ main > header > a > button:nth-of-type(1) {
   height: 72px;
   border: solid var(--second-color-dark) 2px;
   border-radius: 10px / 30px;
+  cursor: pointer;
 }
 
 main > header > a:nth-of-type(2) {
