@@ -45,12 +45,12 @@ const effect =
         delay: (t, i) => i * 20,
         easing: "easeOutElastic",
         translateX: (t) => {
-          const tx = anime.random(-250, 250);
+          const tx = anime.random(-250, window.innerWidth);
           t.dataset.tx = tx;
           return [0, tx];
         },
         translateY: (t) => {
-          const ty = anime.random(-250, 250);
+          const ty = anime.random(-250, window.innerHeight);
           t.dataset.ty = ty;
           return [0, ty];
         },
@@ -72,7 +72,7 @@ const effect =
 class Animation {
   constructor() {
     this.DOM = {};
-    this.DOM.bg = document.querySelector("#bg");
+    this.DOM.bg = document.querySelector("#home");
     this.DOM.word = document.querySelector("#title");
     this.word = new Word(this.DOM.word, effect.options)
     this.isAnimating = true;
@@ -89,8 +89,6 @@ class Animation {
         this.word.show(effect.show).then(() => (this.isAnimating = false));
       },
     });
-    //this.word.hide();
-    //this.word.hide(effect.hide);
   }
 }
 
