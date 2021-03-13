@@ -10,6 +10,7 @@
  */
 {
   // From https://davidwalsh.name/javascript-debounce-function.
+  
   function debounce(func, wait, immediate) {
     var timeout;
     return function () {
@@ -45,7 +46,7 @@
     constructor(type, letterRect, options) {
       this.DOM = {};
       this.options = {
-        shapeTypes: ["text", "circle", "polygon", "text", "text"],
+        shapeTypes: ["text"],
         shapeColors: ["#9EC6C1", "#5C8DD6", "#F0BB81", "#86A9CE"],
         shapeFill: true,
         shapeStrokeWidth: 1,
@@ -61,7 +62,7 @@
       this.letterRect = letterRect;
       this.init();
     }
-    init() {
+    init() {      
       this.DOM.el = document.createElementNS(
         "http://www.w3.org/2000/svg",
         this.type
@@ -93,9 +94,10 @@
       }px ${this.letterRect.top + this.letterRect.height / 2}px`;
 
       if (this.type === "text") {
-        const letters = ["{", "}", "(", ")", "[", "]", ";", "="];
+        const letters = ["{", "!", "(", "&&", "[", ";", "==="];
         const fontSize = 2 * this.letterRect.width;
-        this.DOM.el.innerHTML = letters[randomBetween(0, 7, 0)];
+        this.DOM.el.innerHTML =
+          letters[randomBetween(0, letters.length - 1, 0)];
         this.DOM.el.setAttribute("font-size", fontSize);
         this.DOM.el.setAttribute(
           "x",
@@ -105,7 +107,6 @@
           "y",
           this.letterRect.top + this.letterRect.height / 2
         );
-        console.log(this.DOM.el);
       } else if (this.type === "circle") {
         const r = 0.5 * this.letterRect.width;
         this.DOM.el.setAttribute("r", r);
@@ -155,7 +156,7 @@
       this.DOM.el = el;
       this.DOM.svg = svg;
       this.options = {
-        totalShapes: 10,
+        totalShapes: 5,
       };
       Object.assign(this.options, options);
       this.rect = this.DOM.el.getBoundingClientRect();
@@ -200,9 +201,10 @@
       this.createSVG();
       charming(this.DOM.el);
       this.letters = [];
-      Array.from(this.DOM.el.querySelectorAll("span")).forEach((letter) =>
-        this.letters.push(new Letter(letter, this.DOM.svg, this.options))
-      );
+      Array.from(this.DOM.el.querySelectorAll("span")).forEach((letter) => {
+        console.log(this.DOM.el, letter);
+        this.letters.push(new Letter(letter, this.DOM.svg, this.options));
+      });
     }
     initEvents() {
       window.addEventListener(
