@@ -25,7 +25,24 @@ html {
 }
 
 :focus {
-  outline: 3px dashed var(--main-color-dark);
+  -webkit-animation: 1s ease-in-out 0s focusBorder;
+  animation: 1s ease-in-out 0s focusBorder;
+}
+@-webkit-keyframes focusBorder {
+  from {
+    outline: 2px solid var(--main-color-dark);
+  }
+  to {
+    outline: transparent;
+  }
+}
+@keyframes focusBorder {
+  from {
+    outline: 2px solid var(--main-color-dark);
+  }
+  to {
+    outline: transparent;
+  }
 }
 
 body {
