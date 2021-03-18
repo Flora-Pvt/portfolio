@@ -17,7 +17,7 @@ html {
 * {
   margin: 0;
   padding: 0;
-  list-style-type: '-';
+  list-style-type: "-";
   background-color: transparent;
   color: inherit;
   text-decoration: none;
@@ -53,14 +53,22 @@ body {
 
 /* ---------- typography ---------- */
 @font-face {
-  font-family: "Dosis";
-  src: url("../../src/static/fonts/Dosis-Regular.ttf") format("truetype");
+  font-family: "LibreBaskerville";
+  src: url("../../src/static/fonts/LibreBaskerville-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "SourceSansPro";
+  src: url("../../src/static/fonts/SourceSansPro-Regular.ttf")
+    format("truetype");
 }
 
 body {
   color: var(--second-color-dark);
   font-size: 16px;
-  font-family: "Dosis", "Segoe UI Black", "Arial Rounded MT Bold", sans-serif;
+  font-family: "SourceSansPro", "Segoe UI Black",
+    "Arial Rounded MT Bold", sans-serif;
 }
 
 nav > menu {
@@ -70,7 +78,8 @@ nav > menu {
 
 main > header > hgroup > h1 {
   font-size: clamp(2rem, 7vw, 7rem);
-  font-family: "Dosis", "Segoe UI Black", "Arial Rounded MT Bold", sans-serif;
+  font-family: "LibreBaskerville", "Segoe UI Black",
+    "Arial Rounded MT Bold", sans-serif;
 }
 main > header > a > button:nth-of-type(1) {
   font-size: clamp(1rem, 1.4vw, 1.5rem);
@@ -82,6 +91,9 @@ main > section > a > header > h2 {
 }
 main > section > article > section > h3 {
   font-size: clamp(1rem, 1.6vw, 2rem);
+  font-family: "LibreBaskerville", "Segoe UI Black",
+    "Arial Rounded MT Bold", sans-serif;
+
   color: var(--second-color);
 }
 main > section > article > section > p {
