@@ -202,7 +202,6 @@
       charming(this.DOM.el);
       this.letters = [];
       Array.from(this.DOM.el.querySelectorAll("span")).forEach((letter) => {
-        console.log(this.DOM.el, letter);
         this.letters.push(new Letter(letter, this.DOM.svg, this.options));
       });
     }
