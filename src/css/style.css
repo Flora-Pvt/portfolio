@@ -147,8 +147,10 @@ main > header {
 }
 
 main > header > hgroup {
-  margin-top: 5vh;
+  margin-top: 15vh;
   display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
 }
 
 main > header > hgroup > h1 > svg {
@@ -161,8 +163,7 @@ main > header > hgroup > h1 > svg {
 }
 
 main > header > hgroup > h1 {
-  margin-right: 5vw;
-  width: 30vw;
+  width: 25vw;
 }
 
 main > header > hgroup > h1 > p {
@@ -176,17 +177,23 @@ main > header > hgroup > h1 > p > span {
 }
 
 main > header > hgroup > h2 {
-  width: 10vw;
-  align-self: flex-end;
+  width: 15vw;
+  padding: 2vh 0;
   z-index: 1;
 }
 
-main > header > a:nth-of-type(1) {
-  width: 30vw;
+main > header > section > a:nth-of-type(1) {
+  width: 25vw;
 }
 
-main > header > a > button:nth-of-type(1) {
-  width: 30vw;
+main > header > section {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+main > header > section > a > button:nth-of-type(1) {
+  width: 25vw;
   height: 72px;
   border: solid var(--second-color-dark) 2px;
   border-radius: 10px / 30px;
@@ -197,7 +204,11 @@ main > header > a > button:nth-of-type(1) {
   color: var(--main-color);
 }
 
-main > header > a:nth-of-type(2) {
+main > header > section > p {
+  width: 15vw;
+}
+
+main > header > a:nth-of-type(1) {
   display: flex;
   flex-direction: column;
   justify-content: center;
