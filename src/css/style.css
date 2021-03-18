@@ -105,7 +105,7 @@ nav {
   border-right: solid 1px var(--main-color-dark);
 }
 nav > menu {
-  margin-left: 3vw;
+  margin-left: 4vw;
   width: 35px;
 }
 
@@ -115,7 +115,7 @@ aside {
   border-left: solid 1px var(--main-color-dark);
 }
 aside > a > img {
-  width: 1.8vw;
+  width: 2vw;
   margin-bottom: 1vh;
 }
 
