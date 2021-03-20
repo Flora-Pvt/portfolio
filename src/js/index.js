@@ -1,10 +1,9 @@
-const header = document.querySelector("#show");
+const banner = document.querySelector("#show");
 
-window.addEventListener("wheel", function changeHeaderVisibility() {
-  if (header.getBoundingClientRect().y < 140) {
-    header.style.visibility = "visible";
+window.addEventListener("wheel", function changeBannerVisibility() {
+  if (banner.getBoundingClientRect().y < 140) {
+    banner.style.visibility = "visible";
   } else {
-    header.style.visibility = "hidden";
+    banner.style.visibility = "hidden";
   }
-  console.log(header.getBoundingClientRect().y < 140, header.style.visibility);
 });

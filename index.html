@@ -6,6 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="src/css/style.css" />
+    <script>
+      document.documentElement.className = "js";
+      var supportsCssVars = function () {
+        var s = document.createElement("style"),
+          support;
+
+        s.innerHTML = "root: { --tmp-var: bold; }";
+        document.head.appendChild(s);
+        support = !!(
+          window.CSS &&
+          window.CSS.supports &&
+          window.CSS.supports("font-weight", "var(--tmp-var)")
+        );
+        s.parentNode.removeChild(s);
+        return support;
+      };
+      if (!supportsCssVars())
+        alert(
+          "Please view this demo in a modern browser that supports CSS Variables."
+        );
+    </script>
   </head>
 
   <body>
@@ -21,7 +42,15 @@
     </nav>
 
     <main>
-      <header id="home">
+      <div class="morph-wrap">
+        <svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
+          <path
+            d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"
+          />
+        </svg>
+      </div>
+
+      <header id="home" class="content-wrap">
         <hgroup>
           <h1 id="title">
             <p class="title">Flora</p>
@@ -42,7 +71,6 @@
           </p>
         </section>
 
-        <!-- Icon made by https://www.flaticon.com/authors/lyolya -->
         <a href="index.html#works">
           Mes travaux
           <img
@@ -60,18 +88,17 @@
           </header>
         </a>
 
-        <article id="work1">
+        <article id="work1" class="content-wrap">
           <div>
             <img
-              class="hoverAnimation"
               src="./src/static/images/Japon-58.jpg"
               alt="capture d'écran du projet 1"
             />
           </div>
 
           <section>
-            <h3 class="hoverAnimation">Lorem ipsum</h3>
-            <p class="hoverAnimation">
+            <h3>Lorem ipsum</h3>
+            <p class="content__desc">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Veritatis, libero quo rem delectus enim hic! Nisi eos voluptatem,
               saepe, sed earum neque sint dolor dignissimos corporis, laudantium
@@ -121,7 +148,7 @@
                   </textPath>
                 </text>
               </svg>
-              <a href="#home">
+              <a href="#home" class="content__link">
                 <svg
                   class="middleText"
                   width="80"
@@ -135,10 +162,10 @@
           </section>
         </article>
 
-        <article id="work2">
+        <article id="work2" class="content-wrap">
           <section>
             <h3>Lorem ipsum</h3>
-            <p>
+            <p class="content__desc">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Veritatis, libero quo rem delectus enim hic! Nisi eos voluptatem,
               saepe, sed earum neque sint dolor dignissimos corporis, laudantium
@@ -188,7 +215,7 @@
                   </textPath>
                 </text>
               </svg>
-              <a href="#home">
+              <a href="#home" class="content__link">
                 <svg
                   class="middleText"
                   width="80"
@@ -209,7 +236,7 @@
           </div>
         </article>
 
-        <article id="work3">
+        <article id="work3" class="content--related">
           <div>
             <img
               src="./src/static/images/pexels-sora-shimazaki-5668473.jpg"
@@ -219,7 +246,7 @@
 
           <section>
             <h3>Lorem ipsum</h3>
-            <p>
+            <p class="content__desc">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Veritatis, libero quo rem delectus enim hic! Nisi eos voluptatem,
               saepe, sed earum neque sint dolor dignissimos corporis, laudantium
@@ -269,7 +296,7 @@
                   </textPath>
                 </text>
               </svg>
-              <a href="#home">
+              <a href="#home" class="content__link">
                 <svg
                   class="middleText"
                   width="80"
@@ -301,5 +328,9 @@
     </aside>
 
     <script defer src="./src/js/index.js"></script>
+    <script src="./src/js/imagesloaded.pkgd.min.js"></script>
+    <script src="./src/js/anime.min.js"></script>
+    <script src="./src/js/scrollMonitor.js"></script>
+    <script src="./src/js/codrops-demo.js"></script>
   </body>
 </html>
