@@ -6,40 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="src/css/style.css" />
-    <script>
-      document.documentElement.className = "js";
-      var supportsCssVars = function () {
-        var s = document.createElement("style"),
-          support;
-
-        s.innerHTML = "root: { --tmp-var: bold; }";
-        document.head.appendChild(s);
-        support = !!(
-          window.CSS &&
-          window.CSS.supports &&
-          window.CSS.supports("font-weight", "var(--tmp-var)")
-        );
-        s.parentNode.removeChild(s);
-        return support;
-      };
-      if (!supportsCssVars())
-        alert(
-          "Please view this demo in a modern browser that supports CSS Variables."
-        );
-    </script>
   </head>
 
   <body>
-    <nav>
-      <menu>
-        <li><a href="index.html#home"> M</a></li>
-        <li>
-          <a href="index.html#work1"> E</a>
-        </li>
-        <li><a href="index.html#work2"> N</a></li>
-        <li><a href="index.html#work3"> U</a></li>
-      </menu>
-    </nav>
+    <menu>
+      <a href="index.html#home"><li></li></a>
+      <a href="index.html#work1"><li></li></a>
+      <a href="index.html#work2"><li></li></a>
+      <a href="index.html#work3"><li></li></a>
+    </menu>
 
     <main>
       <div class="morph-wrap">
@@ -52,16 +27,19 @@
 
       <header id="home" class="content-wrap">
         <hgroup>
-          <h1 id="title">
-            <p class="title">Flora</p>
-            <p class="title">Preuvot</p>
+          <h1>
+            <p>Flora</p>
+            <p>Preuvot</p>
           </h1>
           <h2>Développeuse Web front-end</h2>
         </hgroup>
 
         <section>
           <a href="mailto:f-preuvot@outlook.com">
-            <button>Contactez-moi</button>
+            <button class="button button--bestia">
+              <div class="button__bg"></div>
+              <span>Contactez moi</span>
+            </button>
           </a>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
@@ -89,12 +67,10 @@
         </a>
 
         <article id="work1" class="content-wrap">
-          <div>
-            <img
-              src="./src/static/images/Japon-58.jpg"
-              alt="capture d'écran du projet 1"
-            />
-          </div>
+          <img
+            src="./src/static/images/Japon-58.jpg"
+            alt="capture d'écran du projet 1"
+          />
 
           <section>
             <h3>Lorem ipsum</h3>
@@ -104,61 +80,12 @@
               saepe, sed earum neque sint dolor dignissimos corporis, laudantium
               eum consectetur temporibus!
             </p>
-            <button class="button button--surtur">
-              <svg class="textcircle" viewBox="0 0 500 500">
-                <defs>
-                  <path
-                    id="textcircle"
-                    d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"
-                  />
-                </defs>
-                <text font-weight="bolder" font-size="65">
-                  <textPath
-                    xlink:href="#textcircle"
-                    aria-label="Projects & client work 2020"
-                    textLength="900"
-                  >
-                    <tspan fill="#9EC6C1">{</tspan>
-                    <tspan fill="#5C8DD6">}</tspan>
-                    <tspan fill="#F0BB81">;</tspan>
-                    <tspan fill="#86A9CE">[</tspan>
-                    <tspan fill="#9EC6C1">]</tspan>
-                    <tspan fill="#5C8DD6">;</tspan>
-                    <tspan fill="#F0BB81">(</tspan>
-                    <tspan fill="#86A9CE">)</tspan>
-                    <tspan fill="#9EC6C1">;</tspan>
-                    <tspan fill="#9EC6C1">{</tspan>
-                    <tspan fill="#5C8DD6">}</tspan>
-                    <tspan fill="#F0BB81">;</tspan>
-                    <tspan fill="#86A9CE">[</tspan>
-                    <tspan fill="#9EC6C1">]</tspan>
-                    <tspan fill="#5C8DD6">;</tspan>
-                    <tspan fill="#F0BB81">(</tspan>
-                    <tspan fill="#86A9CE">)</tspan>
-                    <tspan fill="#9EC6C1">;</tspan>
-                    <tspan fill="#9EC6C1">{</tspan>
-                    <tspan fill="#5C8DD6">}</tspan>
-                    <tspan fill="#F0BB81">;</tspan>
-                    <tspan fill="#86A9CE">[</tspan>
-                    <tspan fill="#9EC6C1">]</tspan>
-                    <tspan fill="#5C8DD6">;</tspan>
-                    <tspan fill="#F0BB81">(</tspan>
-                    <tspan fill="#86A9CE">)</tspan>
-                    <tspan fill="#9EC6C1">;</tspan>
-                  </textPath>
-                </text>
-              </svg>
-              <a href="#home" class="content__link">
-                <svg
-                  class="middleText"
-                  width="80"
-                  height="50"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <text y="35" x="10" font-size="23">À venir</text>
-                </svg></a
-              >
-            </button>
+            <a href="#home" class="content__link">
+              <button class="button button--bestia">
+                <div class="button__bg"></div>
+                <span>À venir</span>
+              </button>
+            </a>
           </section>
         </article>
 
@@ -171,78 +98,25 @@
               saepe, sed earum neque sint dolor dignissimos corporis, laudantium
               eum consectetur temporibus!
             </p>
-            <button class="button button--surtur">
-              <svg class="textcircle" viewBox="0 0 500 500">
-                <defs>
-                  <path
-                    id="textcircle"
-                    d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"
-                  />
-                </defs>
-                <text font-weight="bolder" font-size="65">
-                  <textPath
-                    xlink:href="#textcircle"
-                    aria-label="Projects & client work 2020"
-                    textLength="900"
-                  >
-                    <tspan fill="#9EC6C1">{</tspan>
-                    <tspan fill="#5C8DD6">}</tspan>
-                    <tspan fill="#F0BB81">;</tspan>
-                    <tspan fill="#86A9CE">[</tspan>
-                    <tspan fill="#9EC6C1">]</tspan>
-                    <tspan fill="#5C8DD6">;</tspan>
-                    <tspan fill="#F0BB81">(</tspan>
-                    <tspan fill="#86A9CE">)</tspan>
-                    <tspan fill="#9EC6C1">;</tspan>
-                    <tspan fill="#9EC6C1">{</tspan>
-                    <tspan fill="#5C8DD6">}</tspan>
-                    <tspan fill="#F0BB81">;</tspan>
-                    <tspan fill="#86A9CE">[</tspan>
-                    <tspan fill="#9EC6C1">]</tspan>
-                    <tspan fill="#5C8DD6">;</tspan>
-                    <tspan fill="#F0BB81">(</tspan>
-                    <tspan fill="#86A9CE">)</tspan>
-                    <tspan fill="#9EC6C1">;</tspan>
-                    <tspan fill="#9EC6C1">{</tspan>
-                    <tspan fill="#5C8DD6">}</tspan>
-                    <tspan fill="#F0BB81">;</tspan>
-                    <tspan fill="#86A9CE">[</tspan>
-                    <tspan fill="#9EC6C1">]</tspan>
-                    <tspan fill="#5C8DD6">;</tspan>
-                    <tspan fill="#F0BB81">(</tspan>
-                    <tspan fill="#86A9CE">)</tspan>
-                    <tspan fill="#9EC6C1">;</tspan>
-                  </textPath>
-                </text>
-              </svg>
-              <a href="#home" class="content__link">
-                <svg
-                  class="middleText"
-                  width="80"
-                  height="50"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <text y="35" x="10" font-size="23">À venir</text>
-                </svg></a
-              >
-            </button>
+            <a href="#home" class="content__link">
+              <button class="button button--bestia">
+                <div class="button__bg"></div>
+                <span>À venir</span>
+              </button>
+            </a>
           </section>
 
-          <div>
-            <img
-              src="./src/static/images/pexels-tembela-bohle-2803160.jpg"
-              alt="capture d'écran du projet 2"
-            />
-          </div>
+          <img
+            src="./src/static/images/pexels-tembela-bohle-2803160.jpg"
+            alt="capture d'écran du projet 2"
+          />
         </article>
 
         <article id="work3" class="content--related">
-          <div>
-            <img
-              src="./src/static/images/pexels-sora-shimazaki-5668473.jpg"
-              alt="capture d'écran du projet 3"
-            />
-          </div>
+          <img
+            src="./src/static/images/pexels-sora-shimazaki-5668473.jpg"
+            alt="capture d'écran du projet 3"
+          />
 
           <section>
             <h3>Lorem ipsum</h3>
@@ -252,61 +126,12 @@
               saepe, sed earum neque sint dolor dignissimos corporis, laudantium
               eum consectetur temporibus!
             </p>
-            <button class="button button--surtur">
-              <svg class="textcircle" viewBox="0 0 500 500">
-                <defs>
-                  <path
-                    id="textcircle"
-                    d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"
-                  />
-                </defs>
-                <text font-weight="bolder" font-size="65">
-                  <textPath
-                    xlink:href="#textcircle"
-                    aria-label="Projects & client work 2020"
-                    textLength="900"
-                  >
-                    <tspan fill="#9EC6C1">{</tspan>
-                    <tspan fill="#5C8DD6">}</tspan>
-                    <tspan fill="#F0BB81">;</tspan>
-                    <tspan fill="#86A9CE">[</tspan>
-                    <tspan fill="#9EC6C1">]</tspan>
-                    <tspan fill="#5C8DD6">;</tspan>
-                    <tspan fill="#F0BB81">(</tspan>
-                    <tspan fill="#86A9CE">)</tspan>
-                    <tspan fill="#9EC6C1">;</tspan>
-                    <tspan fill="#9EC6C1">{</tspan>
-                    <tspan fill="#5C8DD6">}</tspan>
-                    <tspan fill="#F0BB81">;</tspan>
-                    <tspan fill="#86A9CE">[</tspan>
-                    <tspan fill="#9EC6C1">]</tspan>
-                    <tspan fill="#5C8DD6">;</tspan>
-                    <tspan fill="#F0BB81">(</tspan>
-                    <tspan fill="#86A9CE">)</tspan>
-                    <tspan fill="#9EC6C1">;</tspan>
-                    <tspan fill="#9EC6C1">{</tspan>
-                    <tspan fill="#5C8DD6">}</tspan>
-                    <tspan fill="#F0BB81">;</tspan>
-                    <tspan fill="#86A9CE">[</tspan>
-                    <tspan fill="#9EC6C1">]</tspan>
-                    <tspan fill="#5C8DD6">;</tspan>
-                    <tspan fill="#F0BB81">(</tspan>
-                    <tspan fill="#86A9CE">)</tspan>
-                    <tspan fill="#9EC6C1">;</tspan>
-                  </textPath>
-                </text>
-              </svg>
-              <a href="#home" class="content__link">
-                <svg
-                  class="middleText"
-                  width="80"
-                  height="50"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <text y="35" x="10" font-size="23">À venir</text>
-                </svg></a
-              >
-            </button>
+            <a href="#home" class="content__link">
+              <button class="button button--bestia">
+                <div class="button__bg"></div>
+                <span>À venir</span>
+              </button>
+            </a>
           </section>
         </article>
       </section>

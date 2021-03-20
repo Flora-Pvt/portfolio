@@ -17,7 +17,7 @@ html {
 * {
   margin: 0;
   padding: 0;
-  list-style-type: "-";
+  list-style: circle;
   background-color: transparent;
   color: inherit;
   text-decoration: none;
@@ -68,23 +68,31 @@ body {
 body {
   color: var(--second-color-dark);
   font-size: 16px;
-  font-family: "SourceSansPro", "Segoe UI Black",
-    "Arial Rounded MT Bold", sans-serif;
+  font-family: "SourceSansPro", "Segoe UI Black", "Arial Rounded MT Bold",
+    sans-serif;
 }
 
-nav > menu {
+menu {
   font-weight: bold;
   font-size: clamp(1rem, 1.4vw, 1.5rem);
 }
 
 main > header > hgroup > h1 {
   font-size: clamp(2rem, 7vw, 7rem);
-  font-family: "LibreBaskerville", "Segoe UI Black",
-    "Arial Rounded MT Bold", sans-serif;
+  font-family: "LibreBaskerville", "Segoe UI Black", "Arial Rounded MT Bold",
+    sans-serif;
 }
-main > header > a > button:nth-of-type(1) {
+main > header > hgroup > h2 {
+  font-size: clamp(2rem, 7vw, 2rem);
+  font-family: "LibreBaskerville", "Segoe UI Black", "Arial Rounded MT Bold",
+    sans-serif;
+}
+main > header section > a > button:nth-of-type(1) {
   font-size: clamp(1rem, 1.4vw, 1.5rem);
   font-weight: bold;
+}
+main > header section > p {
+  font-size: clamp(1rem, 1.6vw, 1.4rem);
 }
 
 main > section > a > header > h2 {
@@ -92,17 +100,107 @@ main > section > a > header > h2 {
 }
 main > section > article > section > h3 {
   font-size: clamp(1rem, 1.6vw, 2rem);
-  font-family: "LibreBaskerville", "Segoe UI Black",
-    "Arial Rounded MT Bold", sans-serif;
+  font-family: "LibreBaskerville", "Segoe UI Black", "Arial Rounded MT Bold",
+    sans-serif;
 
   color: var(--second-color);
 }
 main > section > article > section > p {
-  font-size: clamp(1rem, 1.6vw, 2rem);
+  font-size: clamp(1rem, 1.6vw, 1.5rem);
 }
 
-/* ---------- left and right bars ---------- */
-nav,
+
+/* ---------- buttons ---------- */
+.button {
+  border: none;
+  padding: 1.5rem 3rem;
+  position: relative;
+  display: inline-block;
+}
+.button::before,
+.button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.button--bestia {
+  font-family: freight-display-pro, serif;
+  font-size: 1.15rem;
+  color: #fff;
+  background: none;
+  padding: 0;
+}
+
+.button--bestia .button__bg {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #E6D0BD;
+  border-radius: 0.85rem;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+.button--bestia:hover .button__bg {
+  transform: scale3d(1.2, 1.2, 1);
+}
+
+.button--bestia .button__bg::before,
+.button--bestia .button__bg::after {
+  content: "";
+  position: absolute;
+  background: var(--second-color);
+}
+
+.button--bestia .button__bg::before {
+  width: 110%;
+  height: 0;
+  padding-bottom: 110%;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 1);
+}
+
+.button--bestia:hover .button__bg::before {
+  transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+  transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);  
+}
+
+.button--bestia .button__bg::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.button--bestia:hover .button__bg::after {
+  opacity: 1;
+  transition-duration: 0.01s;
+  transition-delay: 0.3s;  
+}
+
+.button--bestia span {
+  display: block;
+  position: relative;
+  padding: 1.5rem 3rem;
+  color: var(--second-color-dark);
+}
+
+.button--bestia span:hover {
+  color: #FEFDFC;
+}
+
+
+/* ---------- left and right menus ---------- */
+menu,
 aside {
   height: 100vh;
   display: flex;
@@ -113,29 +211,49 @@ aside {
   z-index: 3;
 }
 
-nav {
-  width: 2.5%;
-  border-right: solid 1px var(--main-color-dark);
+menu {
+  margin-left: 1vw;
 }
-nav > menu {
-  margin-left: 4vw;
-  width: 35px;
+menu > a > li:hover {
+  list-style: disc;
+  color: var(--second-color);
 }
 
 aside {
   right: 0;
-  width: 2.5%;
+  width: 3%;
   border-left: solid 1px var(--main-color-dark);
 }
 aside > a > img {
-  width: 2vw;
+  width: 2.3vw;
   margin-bottom: 1vh;
 }
 
 /* ---------- main ---------- */
 main {
-  width: 95%;
-  margin-left: 2.5vw;
+  width: 97%;
+}
+
+/* ---------- SVG Morph ---------- */
+.morph-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.morph {
+  position: relative;
+  height: 100%;
+  fill: var(--background-color-2);
+  flex: none;
+  z-index: 0;
 }
 
 /* ---------- main header ---------- */
@@ -148,7 +266,7 @@ main > header {
 }
 
 main > header > hgroup {
-  margin-top: 15vh;
+  margin-top: 18vh;
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
@@ -160,11 +278,6 @@ main > header > hgroup > h1 {
 
 main > header > hgroup > h1 > p {
   display: flex;
-  position: relative;
-}
-
-main > header > hgroup > h1 > p > span {
-  opacity: 0;
 }
 
 main > header > hgroup > h2 {
@@ -172,25 +285,15 @@ main > header > hgroup > h2 {
   padding: 2vh 0;
 }
 
-main > header > section > a:nth-of-type(1) {
-  width: 25vw;
-}
-
 main > header > section {
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
+  margin-bottom: 20vh;
 }
 
-main > header > section > a > button:nth-of-type(1) {
+main > header > section > a:nth-of-type(1) {
   width: 25vw;
-  height: 72px;
-  border: solid var(--second-color-dark) 2px;
-  border-radius: 10px / 30px;
-  cursor: pointer;
-  position: relative;
-  background-color: var(--second-color);
-  color: var(--main-color);
 }
 
 main > header > section > p {
@@ -212,7 +315,6 @@ main > header > a > img {
 main > section > a > header {
   background-color: var(--main-color);
   border-bottom: var(--main-color-dark) 1px solid;
-  border-top: var(--main-color-dark) 1px solid;
   left: 0;
   top: 0;
   position: sticky;
@@ -237,7 +339,14 @@ main > section > article {
 main > section > article > section {
   width: 40vw;
   margin-top: 5vh;
-  margin-left: 15vw;
+}
+main > section > article:nth-of-type(1) > section,
+main > section > article:nth-of-type(3) > section {
+  margin-left: 5vw;
+}
+main > section > article:nth-of-type(2) > section {
+  margin-left: 10vw;
+  margin-right: 5vw;
 }
 
 main > section > article > section > h3 {
@@ -248,99 +357,13 @@ main > section > article > section > p {
   margin-bottom: 4vh;
 }
 
-main > section > article > div {
-  width: 30vw;
-  height: 75vh;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-main > section > article > div > img {
+main > section > article > img {
   width: 35vw;
   height: 50vh;
-  position: absolute;
   object-fit: cover;
+  border-radius: 30px;
 }
-main > section > article:nth-of-type(1) > div > img,
-main > section > article:nth-of-type(3) > div > img {
-  left: 5vw;
-}
-main > section > article:nth-of-type(2) > div > img {
-  right: 5vw;
-}
-
-/* ---------- works : discover buttons ---------- */
-.button {
-  border: none;
-  padding: 1.5rem 3rem;
-  position: relative;
-  display: inline-block;
-}
-.button::before,
-.button::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.button--surtur {
-  padding: 0;
-  clip-path: circle(40% at 50% 50%);
-}
-
-.textcircle {
-  position: relative;
-  display: block;
-  width: 200px;
-}
-
-.textcircle textPath {
-  letter-spacing: 17px;
-}
-
-.button--surtur:hover .textcircle {
-  animation: rotateIt 7s linear infinite;
-}
-
-.middleText {
-  fill: var(--second-color-dark);
-  position: absolute;
-  top: calc(35%);
-  left: calc(30%);
-  border: solid var(--second-color-dark) 2px;
-  border-radius: 10px / 30px;
-}
-
-@keyframes rotateIt {
-  to {
-    transform: rotate(-360deg);
-  }
-}
-
-
-
-
-
-/* SVG Morph */
-.morph-wrap {
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	overflow: hidden;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	pointer-events: none;
-}
-
-.morph {
-	position: relative;
-	height: 100%;
-	fill: var(--background-color-2);
-	flex: none;
-  z-index: 0;
+main > section > article:nth-of-type(1) > img,
+main > section > article:nth-of-type(3) > img {
+  margin-left: 10vw;
 }
