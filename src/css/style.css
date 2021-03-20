@@ -192,6 +192,7 @@ main > section > article > section > p {
   position: relative;
   padding: 1.5rem 3rem;
   color: var(--second-color-dark);
+  font-weight: bold;
 }
 
 .button--bestia span:hover {
@@ -287,9 +288,8 @@ main > header > hgroup > h2 {
 
 main > header > section {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-around;
-  margin-bottom: 20vh;
 }
 
 main > header > section > a:nth-of-type(1) {
@@ -308,7 +308,6 @@ main > header > a:nth-of-type(1) {
 }
 main > header > a > img {
   height: 30px;
-  margin-top: 10px;
 }
 
 /* ---------- works ---------- */
@@ -332,13 +331,13 @@ main > section > a > header > h2 {
 
 main > section > article {
   height: 80vh;
-  display: flex;
-  padding: 10vh 0;
+  display: flex;  
 }
 
 main > section > article > section {
   width: 40vw;
   margin-top: 5vh;
+  padding-top: 10vh;
 }
 main > section > article:nth-of-type(1) > section,
 main > section > article:nth-of-type(3) > section {
