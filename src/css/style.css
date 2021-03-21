@@ -198,6 +198,37 @@ main > section > article > section > p {
   color: #fefdfc;
 }
 
+.button--anthe {
+	font-family: bely-display, sans-serif;
+	color: #fff;
+	background: none;
+}
+
+.button--anthe::before {
+	content: '';
+	background: #000;
+	-webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+	clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+	transition: clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1), -webkit-clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1);
+}
+
+.button--anthe:hover::before {
+	background: #000;
+	-webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+	clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+.button--anthe span {
+	display: block;
+	mix-blend-mode: difference;
+	transition: transform 0.4s cubic-bezier(0.2, 1, 0.8, 1);
+}
+
+.button--anthe:hover span {
+	transform: translate3d(-10px,0,0);
+}
+
+
 /* ---------- left and right menus ---------- */
 menu,
 aside {
@@ -231,7 +262,8 @@ aside > a > img {
 
 /* ---------- main ---------- */
 main {
-  width: 97%;
+  width: 94%;
+  margin-left: 3%;
 }
 
 /* ---------- SVG Morph ---------- */
@@ -306,7 +338,7 @@ main > header > a:nth-of-type(1) {
   align-items: center;
 }
 main > header > a > img {
-  height: 30px;
+  height: 40px;
 }
 
 /* ---------- works ---------- */
@@ -316,7 +348,8 @@ main > section > a > header {
   left: 0;
   top: 0;
   position: sticky;
-  width: 100%;
+  width: 103%;
+  margin-left: -3%;
   height: 2.5vw;
   z-index: 2;
   display: flex;
@@ -356,8 +389,8 @@ main > section > article > section > p {
 }
 
 main > section > article > img {
-  width: 35vw;
-  height: 50vh;
+  width: 35%;
+  height: 50%;
   object-fit: cover;
   border-radius: 30px;
   mix-blend-mode: screen;
@@ -369,7 +402,7 @@ main > section > article:nth-of-type(5) > img {
 
 .modal {
   position: fixed;
-  background-color: var(--main-color-dark);
+  background-color: var(--main-color);
 
   z-index: 4;
   width: 67%;
@@ -378,7 +411,7 @@ main > section > article:nth-of-type(5) > img {
   left: 16.5%;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
   /* Embiggen */
@@ -392,17 +425,21 @@ main > section > article:nth-of-type(5) > img {
 .modal__text {
   font-size: 12px;
   width: 30%;
+  z-index: 6;
 }
 
 .modal__img {
   z-index: 5;
   mix-blend-mode: normal;
+  border-radius: 0;
+  height: 100%;
+  width: 40%;
 }
 
 .modal__arrow {
   align-self: flex-start;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   padding: 4px 8px;
   mix-blend-mode: normal;
 }

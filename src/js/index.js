@@ -5,6 +5,8 @@ const buttons = Array.from(document.querySelectorAll(".button"));
 const modals = Array.from(document.querySelectorAll(".modal"));
 const images = Array.from(document.querySelectorAll(".modal__img"));
 
+const svg = document.querySelector(".morph");
+
 window.addEventListener("wheel", function changeBannerVisibility() {
   if (arrow.getBoundingClientRect().top < -200) {
     banner.style.visibility = "visible";
@@ -15,15 +17,20 @@ window.addEventListener("wheel", function changeBannerVisibility() {
 
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", () => {
-    console.log(images[i - 1].style);    
-    modals[i - 1].style.opacity = 1;
-    console.log(modals[i - 1].style.opacity);
-    /*anime({
-      targets: images[i - 1],
-      duration: 500,
+    anime({
+      targets: svg,
+      scaleX: 4.5,
+      scaleY: 3,
+      duration: 1000,
       easing: "easeInOutQuad",
-      width: window.innerWidth / 2,
-      height: window.innerHeight,
-    });*/
+    });
+
+    anime({
+      targets: modals[i - 1],
+      duration: 500,
+      delay: 800,
+      easing: "easeInOutQuad",
+      opacity: 1,
+    });
   });
 }
