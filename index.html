@@ -9,29 +9,47 @@
   </head>
 
   <body>
-    <nav>
-      <menu>
-        <li><a href="index.html#home">- 0</a></li>
-        <li>
-          <a href="index.html#work1">- <span> 1</span></a>
-        </li>
-        <li><a href="index.html#work2">- 2</a></li>
-        <li><a href="index.html#work3">- 3</a></li>
-      </menu>
-    </nav>
+    <menu>
+      <a href="index.html#home"><li></li></a>
+      <a href="index.html#work1"><li></li></a>
+      <a href="index.html#work2"><li></li></a>
+      <a href="index.html#work3"><li></li></a>
+    </menu>
 
     <main>
-      <header id="home">
+      <div class="morph-wrap">
+        <svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
+          <path
+            d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"
+          />
+        </svg>
+      </div>
+
+      <header id="home" class="content-wrap">
         <hgroup>
-          <h1 id="title"><p class="title">FLORA</p> <p class="title"> PREUVOT</p></h1>
+          <h1>
+            <p>Flora</p>
+            <p>Preuvot</p>
+          </h1>
           <h2>Développeuse Web front-end</h2>
         </hgroup>
-        <a href="mailto:f-preuvot@outlook.com">
-          <button>Contactez-moi</button>
-        </a>
 
-        <!-- Icon made by https://www.flaticon.com/authors/lyolya -->
-        <a href="index.html#works">
+        <section>
+          <a href="mailto:f-preuvot@outlook.com">
+            <button class="button button--bestia">
+              <div class="button__bg"></div>
+              <span>Contactez moi</span>
+            </button>
+          </a>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+            magnam nisi aperiam, excepturi provident voluptates magni doloremque
+            nam voluptate voluptatibus ut ipsam unde libero cumque odio officiis
+            corporis hic quisquam.
+          </p>
+        </section>
+
+        <a id="arrow" href="index.html#works">
           Mes travaux
           <img
             alt="flèche vers le bas"
@@ -41,231 +59,79 @@
       </header>
 
       <section id="works">
-        <header>
-          <h2>Flora Preuvot</h2>
-          <h2>Mes réalisations</h2>
-        </header>
+        <a id="show" href="index.html#home">
+          <header>
+            <h2>Flora Preuvot</h2>
+            <h2>Mes réalisations</h2>
+          </header>
+        </a>
 
-        <article id="work1">
-          <div>
-            <img
-              class="hoverAnimation"
-              src="./src/static/images/Japon-58.jpg"
-              alt="capture d'écran du projet 1"
-            />
-          </div>
-
-          <section>
-            <h3 class="hoverAnimation">Lorem ipsum</h3>
-            <p class="hoverAnimation">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Veritatis, libero quo rem delectus enim hic! Nisi eos voluptatem,
-              saepe, sed earum neque sint dolor dignissimos corporis, laudantium
-              eum consectetur temporibus!
-            </p>
-            <button class="button button--surtur">
-              <svg class="textcircle" viewBox="0 0 500 500">
-                <defs>
-                  <path
-                    id="textcircle"
-                    d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"
-                  />
-                </defs>
-                <text font-weight="bolder" font-size="65">
-                  <textPath
-                    xlink:href="#textcircle"
-                    aria-label="Projects & client work 2020"
-                    textLength="900"
-                  >
-                    <tspan fill="#9EC6C1">{</tspan>
-                    <tspan fill="#5C8DD6">}</tspan>
-                    <tspan fill="#F0BB81">;</tspan>
-                    <tspan fill="#86A9CE">[</tspan>
-                    <tspan fill="#9EC6C1">]</tspan>
-                    <tspan fill="#5C8DD6">;</tspan>
-                    <tspan fill="#F0BB81">(</tspan>
-                    <tspan fill="#86A9CE">)</tspan>
-                    <tspan fill="#9EC6C1">;</tspan>
-                    <tspan fill="#9EC6C1">{</tspan>
-                    <tspan fill="#5C8DD6">}</tspan>
-                    <tspan fill="#F0BB81">;</tspan>
-                    <tspan fill="#86A9CE">[</tspan>
-                    <tspan fill="#9EC6C1">]</tspan>
-                    <tspan fill="#5C8DD6">;</tspan>
-                    <tspan fill="#F0BB81">(</tspan>
-                    <tspan fill="#86A9CE">)</tspan>
-                    <tspan fill="#9EC6C1">;</tspan>
-                    <tspan fill="#9EC6C1">{</tspan>
-                    <tspan fill="#5C8DD6">}</tspan>
-                    <tspan fill="#F0BB81">;</tspan>
-                    <tspan fill="#86A9CE">[</tspan>
-                    <tspan fill="#9EC6C1">]</tspan>
-                    <tspan fill="#5C8DD6">;</tspan>
-                    <tspan fill="#F0BB81">(</tspan>
-                    <tspan fill="#86A9CE">)</tspan>
-                    <tspan fill="#9EC6C1">;</tspan>
-                  </textPath>
-                </text>
-              </svg>
-              <a href="#home">
-                <svg
-                  class="middleText"
-                  width="80"
-                  height="50"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <text y="35" x="10" font-size="23">À venir</text>
-                </svg></a
-              >
-            </button>
-          </section>
-        </article>
-
-        <article id="work2">
-          <section>
-            <h3>Lorem ipsum</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Veritatis, libero quo rem delectus enim hic! Nisi eos voluptatem,
-              saepe, sed earum neque sint dolor dignissimos corporis, laudantium
-              eum consectetur temporibus!
-            </p>
-            <button class="button button--surtur">
-              <svg class="textcircle" viewBox="0 0 500 500">
-                <defs>
-                  <path
-                    id="textcircle"
-                    d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"
-                  />
-                </defs>
-                <text font-weight="bolder" font-size="65">
-                  <textPath
-                    xlink:href="#textcircle"
-                    aria-label="Projects & client work 2020"
-                    textLength="900"
-                  >
-                    <tspan fill="#9EC6C1">{</tspan>
-                    <tspan fill="#5C8DD6">}</tspan>
-                    <tspan fill="#F0BB81">;</tspan>
-                    <tspan fill="#86A9CE">[</tspan>
-                    <tspan fill="#9EC6C1">]</tspan>
-                    <tspan fill="#5C8DD6">;</tspan>
-                    <tspan fill="#F0BB81">(</tspan>
-                    <tspan fill="#86A9CE">)</tspan>
-                    <tspan fill="#9EC6C1">;</tspan>
-                    <tspan fill="#9EC6C1">{</tspan>
-                    <tspan fill="#5C8DD6">}</tspan>
-                    <tspan fill="#F0BB81">;</tspan>
-                    <tspan fill="#86A9CE">[</tspan>
-                    <tspan fill="#9EC6C1">]</tspan>
-                    <tspan fill="#5C8DD6">;</tspan>
-                    <tspan fill="#F0BB81">(</tspan>
-                    <tspan fill="#86A9CE">)</tspan>
-                    <tspan fill="#9EC6C1">;</tspan>
-                    <tspan fill="#9EC6C1">{</tspan>
-                    <tspan fill="#5C8DD6">}</tspan>
-                    <tspan fill="#F0BB81">;</tspan>
-                    <tspan fill="#86A9CE">[</tspan>
-                    <tspan fill="#9EC6C1">]</tspan>
-                    <tspan fill="#5C8DD6">;</tspan>
-                    <tspan fill="#F0BB81">(</tspan>
-                    <tspan fill="#86A9CE">)</tspan>
-                    <tspan fill="#9EC6C1">;</tspan>
-                  </textPath>
-                </text>
-              </svg>
-              <a href="#home">
-                <svg
-                  class="middleText"
-                  width="80"
-                  height="50"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <text y="35" x="10" font-size="23">À venir</text>
-                </svg></a
-              >
-            </button>
-          </section>
-
-          <div>
-            <img
-              src="./src/static/images/pexels-tembela-bohle-2803160.jpg"
-              alt="capture d'écran du projet 2"
-            />
-          </div>
-        </article>
-
-        <article id="work3">
-          <div>
-            <img
-              src="./src/static/images/pexels-sora-shimazaki-5668473.jpg"
-              alt="capture d'écran du projet 3"
-            />
-          </div>
+        <article id="work1" class="content-wrap">
+          <img
+            src="./src/static/images/Japon-58.jpg"
+            alt="capture d'écran du projet 1"
+          />
 
           <section>
             <h3>Lorem ipsum</h3>
-            <p>
+            <p class="content__desc">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Veritatis, libero quo rem delectus enim hic! Nisi eos voluptatem,
               saepe, sed earum neque sint dolor dignissimos corporis, laudantium
               eum consectetur temporibus!
             </p>
-            <button class="button button--surtur">
-              <svg class="textcircle" viewBox="0 0 500 500">
-                <defs>
-                  <path
-                    id="textcircle"
-                    d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"
-                  />
-                </defs>
-                <text font-weight="bolder" font-size="65">
-                  <textPath
-                    xlink:href="#textcircle"
-                    aria-label="Projects & client work 2020"
-                    textLength="900"
-                  >
-                    <tspan fill="#9EC6C1">{</tspan>
-                    <tspan fill="#5C8DD6">}</tspan>
-                    <tspan fill="#F0BB81">;</tspan>
-                    <tspan fill="#86A9CE">[</tspan>
-                    <tspan fill="#9EC6C1">]</tspan>
-                    <tspan fill="#5C8DD6">;</tspan>
-                    <tspan fill="#F0BB81">(</tspan>
-                    <tspan fill="#86A9CE">)</tspan>
-                    <tspan fill="#9EC6C1">;</tspan>
-                    <tspan fill="#9EC6C1">{</tspan>
-                    <tspan fill="#5C8DD6">}</tspan>
-                    <tspan fill="#F0BB81">;</tspan>
-                    <tspan fill="#86A9CE">[</tspan>
-                    <tspan fill="#9EC6C1">]</tspan>
-                    <tspan fill="#5C8DD6">;</tspan>
-                    <tspan fill="#F0BB81">(</tspan>
-                    <tspan fill="#86A9CE">)</tspan>
-                    <tspan fill="#9EC6C1">;</tspan>
-                    <tspan fill="#9EC6C1">{</tspan>
-                    <tspan fill="#5C8DD6">}</tspan>
-                    <tspan fill="#F0BB81">;</tspan>
-                    <tspan fill="#86A9CE">[</tspan>
-                    <tspan fill="#9EC6C1">]</tspan>
-                    <tspan fill="#5C8DD6">;</tspan>
-                    <tspan fill="#F0BB81">(</tspan>
-                    <tspan fill="#86A9CE">)</tspan>
-                    <tspan fill="#9EC6C1">;</tspan>
-                  </textPath>
-                </text>
-              </svg>
-              <a href="#home">
-                <svg
-                  class="middleText"
-                  width="80"
-                  height="50"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <text y="35" x="10" font-size="23">À venir</text>
-                </svg></a
-              >
-            </button>
+            <a href="#home" class="content__link">
+              <button class="button button--bestia">
+                <div class="button__bg"></div>
+                <span>À venir</span>
+              </button>
+            </a>
+          </section>
+        </article>
+
+        <article id="work2" class="content-wrap">
+          <section>
+            <h3>Lorem ipsum</h3>
+            <p class="content__desc">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Veritatis, libero quo rem delectus enim hic! Nisi eos voluptatem,
+              saepe, sed earum neque sint dolor dignissimos corporis, laudantium
+              eum consectetur temporibus!
+            </p>
+            <a href="#home" class="content__link">
+              <button class="button button--bestia">
+                <div class="button__bg"></div>
+                <span>À venir</span>
+              </button>
+            </a>
+          </section>
+
+          <img
+            src="./src/static/images/pexels-tembela-bohle-2803160.jpg"
+            alt="capture d'écran du projet 2"
+          />
+        </article>
+
+        <article id="work3" class="content--related">
+          <img
+            src="./src/static/images/pexels-sora-shimazaki-5668473.jpg"
+            alt="capture d'écran du projet 3"
+          />
+
+          <section>
+            <h3>Lorem ipsum</h3>
+            <p class="content__desc">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Veritatis, libero quo rem delectus enim hic! Nisi eos voluptatem,
+              saepe, sed earum neque sint dolor dignissimos corporis, laudantium
+              eum consectetur temporibus!
+            </p>
+            <a href="#home" class="content__link">
+              <button class="button button--bestia">
+                <div class="button__bg"></div>
+                <span>À venir</span>
+              </button>
+            </a>
           </section>
         </article>
       </section>
@@ -286,10 +152,10 @@
       /></a>
     </aside>
 
-    <script defer src="./src/js/charming.min.js"></script>
-    <script defer src="./src/js/anime.min.js"></script>
-    <script defer src="./src/js/shape.js"></script>
-    <script defer src="./src/js/show.js"></script>
     <script defer src="./src/js/index.js"></script>
+    <script src="./src/js/imagesloaded.pkgd.min.js"></script>
+    <script src="./src/js/anime.min.js"></script>
+    <script src="./src/js/scrollMonitor.js"></script>
+    <script src="./src/js/codrops-demo.js"></script>
   </body>
 </html>
