@@ -11,7 +11,7 @@ html {
   --second-color-light: #e9f2f1;
   --second-color-dark: #101b27;
 
-  --accent-color: #9EC6C1;
+  --accent-color: #9ec6c1;
 }
 
 * {
@@ -83,7 +83,7 @@ main > header > hgroup > h1 {
     sans-serif;
 }
 main > header > hgroup > h2 {
-  font-size: clamp(2rem, 7vw, 2rem);
+  font-size: clamp(1rem, 4vw, 2rem);
   font-family: "LibreBaskerville", "Segoe UI Black", "Arial Rounded MT Bold",
     sans-serif;
 }
@@ -92,7 +92,7 @@ main > header section > a > button:nth-of-type(1) {
   font-weight: bold;
 }
 main > header section > p {
-  font-size: clamp(1rem, 1.2vw, 1.4rem);
+  font-size: clamp(0.9rem, 1.2vw, 1.4rem);
 }
 
 main > section > a > header > h2 {
@@ -112,7 +112,7 @@ main > section > article > section > p {
 /* ---------- buttons ---------- */
 .button {
   border: none;
-  padding: 1.5rem 3rem;
+  padding: 0.75rem 1.5rem;
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -122,13 +122,13 @@ main > section > article > section > p {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
 }
 
 .button--bestia {
   font-family: freight-display-pro, serif;
-  font-size: 1.15rem;
+  font-size: 1rem;
   color: #fff;
   background: none;
   padding: 0;
@@ -190,7 +190,7 @@ main > section > article > section > p {
 .button--bestia span {
   display: block;
   position: relative;
-  padding: 1.5rem 3rem;
+  padding: 1rem 1.5rem;
   color: var(--second-color-dark);
   font-weight: bold;
 }
@@ -230,11 +230,27 @@ main > section > article > section > p {
   transform: translate3d(-10px, 0, 0);
 }
 
+@media screen and (min-width: 540px) {
+  .button {
+    padding: 1.5rem 3rem;
+  }
+  .button::before,
+  .button::after {
+    width: 100%;
+    height: 100%;
+  }
+  .button--bestia {
+    font-size: 1.15rem;
+  }
+  .button--bestia span {
+    padding: 1.5rem 3rem;
+  }
+}
+
 /* ---------- left and right menus ---------- */
 menu,
 aside {
   height: 100vh;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -243,7 +259,8 @@ aside {
 }
 
 menu {
-  margin-left: 3%;
+  margin-left: 6%;
+  display: flex;
 }
 
 menu > a > li:hover {
@@ -263,6 +280,7 @@ menu > a:nth-of-type(4) > li:hover {
 }
 
 aside {
+  display: none;
   right: 0;
   width: 3%;
   border-left: solid 1px var(--main-color-dark);
@@ -272,10 +290,25 @@ aside > a > img {
   margin-bottom: 1vh;
 }
 
+@media screen and (min-width: 540px) {
+  menu {
+    margin-left: 3%;
+  }
+  aside {
+    display: flex;
+  }
+}
+
 /* ---------- main ---------- */
 main {
   width: 94%;
-  margin-left: 3%;
+  margin-left: 6%;
+}
+
+@media screen and (min-width: 540px) {
+  main {
+    margin-left: 3%;
+  }
 }
 
 /* ---------- SVG Morph ---------- */
@@ -307,14 +340,14 @@ main > header {
 }
 
 main > header > hgroup {
-  margin: 18vh 15% 0;
+  margin: 18vh 5% 7vh;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
 }
 
 main > header > hgroup > h1 {
-  width: 25vw;
+  width: 60%;
 }
 
 main > header > hgroup > h1 > p {
@@ -322,25 +355,26 @@ main > header > hgroup > h1 > p {
 }
 
 main > header > hgroup > h2 {
-  width: 15vw;
-  padding: 2vh 0;
+  width: 40%;
+  padding: 1% 0;
 }
 
 main > header > section {
-  margin: 0 15%;
+  margin: 0 5%;
   display: flex;
-  align-items: center;
+  flex-direction: column-reverse;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
-main > header > section > p {
-  width: 15vw;
+main > header > section p {
+  margin: 4vh 0;
 }
 
 main > header > a:nth-of-type(1) {
   position: absolute;
   bottom: 5px;
-  left: 50%;
+  left: 44%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -348,8 +382,8 @@ main > header > a:nth-of-type(1) {
 }
 main > header > a > img {
   height: 40px;
-  -webkit-animation: yTranslation 0.5s infinite alternate ease-in-out 0s ;
-  animation: yTranslation 0.5s infinite alternate ease-in-out 0s ;
+  -webkit-animation: yTranslation 0.5s infinite alternate ease-in-out 0s;
+  animation: yTranslation 0.5s infinite alternate ease-in-out 0s;
 }
 @-webkit-keyframes yTranslation {
   from {
@@ -365,6 +399,39 @@ main > header > a > img {
   }
   to {
     transform: translateY(10%);
+  }
+}
+
+@media screen and (min-width: 540px) {
+  main > header > hgroup {
+    margin: 18vh 15% 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  main > header > hgroup > h1 {
+    width: 25vw;
+  }
+
+  main > header > hgroup > h2 {
+    width: 15vw;
+    padding: 2vh 0;
+  }
+
+  main > header > section {
+    margin: 0 15%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  main > header > section > p {
+    width: 15vw;
+  }
+
+  main > header > a:nth-of-type(1) {
+    left: 50%;
   }
 }
 
