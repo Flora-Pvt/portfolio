@@ -36,7 +36,7 @@
 
         <section>
           <a href="mailto:f-preuvot@outlook.com">
-            <button class="button button--bestia">
+            <button class="button button--bestia open-button">
               <div class="button__bg"></div>
               <span>Contactez moi</span>
             </button>
@@ -59,7 +59,7 @@
       </header>
 
       <section id="works">
-        <a id="show" href="index.html#home">
+        <a id="banner" href="index.html#home">
           <header>
             <h2>Flora Preuvot</h2>
             <h2>Mes réalisations</h2>
@@ -80,13 +80,40 @@
               saepe, sed earum neque sint dolor dignissimos corporis, laudantium
               eum consectetur temporibus!
             </p>
-            <a href="#home" class="content__link">
-              <button class="button button--bestia">
+            <a>
+              <button class="button button--bestia open-button">
                 <div class="button__bg"></div>
                 <span>À venir</span>
               </button>
             </a>
           </section>
+        </article>
+
+        <article class="modal">
+          <img
+            class="modal__img"
+            src="./src/static/images/Japon-58.jpg"
+            alt="capture d'écran du projet 1"
+          />
+
+          <section class="modal__text">
+            <h3>Lorem ipsum</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Veritatis, libero quo rem delectus enim hic! Nisi eos voluptatem,
+              saepe, sed earum neque sint dolor dignissimos corporis, laudantium
+              eum consectetur temporibus!
+            </p>
+            <a>
+              <button class="button button--anthe"><span>Initialize</span></button>
+            </a>
+          </section>
+
+          <img
+            class="modal__arrow close-button"
+            alt="flèche vers le bas"
+            src="./src/static/icons/left-arrow.svg"
+          />
         </article>
 
         <article id="work2" class="content-wrap">
@@ -98,8 +125,8 @@
               saepe, sed earum neque sint dolor dignissimos corporis, laudantium
               eum consectetur temporibus!
             </p>
-            <a href="#home" class="content__link">
-              <button class="button button--bestia">
+            <a>
+              <button class="button button--bestia open-button">
                 <div class="button__bg"></div>
                 <span>À venir</span>
               </button>
@@ -107,6 +134,33 @@
           </section>
 
           <img
+            src="./src/static/images/pexels-tembela-bohle-2803160.jpg"
+            alt="capture d'écran du projet 2"
+          />
+        </article>
+
+        <article class="modal">
+          <img
+            class="modal__arrow close-button"
+            alt="flèche vers le bas"
+            src="./src/static/icons/left-arrow.svg"
+          />
+
+          <section class="modal__text">
+            <h3>Lorem ipsum</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Veritatis, libero quo rem delectus enim hic! Nisi eos voluptatem,
+              saepe, sed earum neque sint dolor dignissimos corporis, laudantium
+              eum consectetur temporibus!
+            </p>
+            <a>
+              <button class="button button--anthe"><span>Initialize</span></button>
+            </a>
+          </section>
+
+          <img
+            class="modal__img"
             src="./src/static/images/pexels-tembela-bohle-2803160.jpg"
             alt="capture d'écran du projet 2"
           />
@@ -126,13 +180,40 @@
               saepe, sed earum neque sint dolor dignissimos corporis, laudantium
               eum consectetur temporibus!
             </p>
-            <a href="#home" class="content__link">
-              <button class="button button--bestia">
+            <a>
+              <button class="button button--bestia open-button">
                 <div class="button__bg"></div>
                 <span>À venir</span>
               </button>
             </a>
           </section>
+        </article>
+
+        <article class="modal">
+          <img
+            class="modal__img"
+            src="./src/static/images/pexels-sora-shimazaki-5668473.jpg"
+            alt="capture d'écran du projet 3"
+          />
+
+          <section class="modal__text">
+            <h3>Lorem ipsum</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Veritatis, libero quo rem delectus enim hic! Nisi eos voluptatem,
+              saepe, sed earum neque sint dolor dignissimos corporis, laudantium
+              eum consectetur temporibus!
+            </p>
+            <a>
+              <button class="button button--anthe"><span>Initialize</span></button>
+            </a>
+          </section>
+
+          <img
+            class="modal__arrow close-button"
+            alt="flèche vers le bas"
+            src="./src/static/icons/left-arrow.svg"
+          />
         </article>
       </section>
     </main>
@@ -151,11 +232,11 @@
         ><img src="./src/static/icons/LI-In-Bug.png" alt="logo Linkedin"
       /></a>
     </aside>
-
-    <script defer src="./src/js/index.js"></script>
+    
     <script src="./src/js/imagesloaded.pkgd.min.js"></script>
     <script src="./src/js/anime.min.js"></script>
     <script src="./src/js/scrollMonitor.js"></script>
     <script src="./src/js/codrops-demo.js"></script>
+    <script defer src="./src/js/index.js"></script>
   </body>
 </html>

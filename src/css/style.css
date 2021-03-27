@@ -11,7 +11,7 @@ html {
   --second-color-light: #e9f2f1;
   --second-color-dark: #101b27;
 
-  --accent-color: #E9F2F1;
+  --accent-color: #e9f2f1;
 }
 
 * {
@@ -198,6 +198,37 @@ main > section > article > section > p {
   color: #fefdfc;
 }
 
+.button--anthe {
+	font-family: bely-display, sans-serif;
+	color: #fff;
+	background: none;
+}
+
+.button--anthe::before {
+	content: '';
+	background: #000;
+	-webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+	clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+	transition: clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1), -webkit-clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1);
+}
+
+.button--anthe:hover::before {
+	background: #000;
+	-webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+	clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+.button--anthe span {
+	display: block;
+	mix-blend-mode: difference;
+	transition: transform 0.4s cubic-bezier(0.2, 1, 0.8, 1);
+}
+
+.button--anthe:hover span {
+	transform: translate3d(-10px,0,0);
+}
+
+
 /* ---------- left and right menus ---------- */
 menu,
 aside {
@@ -207,12 +238,13 @@ aside {
   justify-content: center;
   align-items: center;
   position: fixed;
-  z-index: 3;
+  z-index: 0;
 }
 
 menu {
   margin-left: 3%;
 }
+
 menu > a > li:hover {
   list-style: disc;
   color: var(--second-color);
@@ -231,6 +263,7 @@ aside > a > img {
 /* ---------- main ---------- */
 main {
   width: 94%;
+  margin-left: 3%;
 }
 
 /* ---------- SVG Morph ---------- */
@@ -305,7 +338,7 @@ main > header > a:nth-of-type(1) {
   align-items: center;
 }
 main > header > a > img {
-  height: 30px;
+  height: 40px;
 }
 
 /* ---------- works ---------- */
@@ -315,7 +348,8 @@ main > section > a > header {
   left: 0;
   top: 0;
   position: sticky;
-  width: 100%;
+  width: 103%;
+  margin-left: -3%;
   height: 2.5vw;
   z-index: 2;
   display: flex;
@@ -337,10 +371,11 @@ main > section > article > section {
   padding-top: 5vh;
 }
 main > section > article:nth-of-type(1) > section,
-main > section > article:nth-of-type(3) > section {
+main > section > article:nth-of-type(5) > section {
   margin-left: 5vw;
 }
-main > section > article:nth-of-type(2) > section {
+main > section > article:nth-of-type(3) > section,
+main > section > article:nth-of-type(4) > section {
   margin-left: 10vw;
   margin-right: 5vw;
 }
@@ -354,13 +389,57 @@ main > section > article > section > p {
 }
 
 main > section > article > img {
-  width: 35vw;
-  height: 50vh;
+  width: 35%;
+  height: 50%;
   object-fit: cover;
   border-radius: 30px;
-  mix-blend-mode:screen;
+  mix-blend-mode: screen;
 }
 main > section > article:nth-of-type(1) > img,
-main > section > article:nth-of-type(3) > img {
+main > section > article:nth-of-type(5) > img {
   margin-left: 10vw;
+}
+
+.modal {
+  position: fixed;
+  background-color: var(--main-color);
+
+  z-index: 4;
+  width: 67%;
+  height: 67%;
+  top: 16.5%;
+  left: 16.5%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Embiggen */
+  transform: scale(1.5); /* prefix me */
+
+  /* Hidden */
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal__text {
+  font-size: 12px;
+  width: 30%;
+  z-index: 6;
+}
+
+.modal__img {
+  z-index: 5;
+  mix-blend-mode: normal;
+  border-radius: 0;
+  height: 100%;
+  width: 40%;
+}
+
+.modal__arrow {
+  align-self: flex-start;
+  width: 30px;
+  height: 30px;
+  padding: 4px 8px;
+  mix-blend-mode: normal;
 }
