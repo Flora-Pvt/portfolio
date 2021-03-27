@@ -11,7 +11,7 @@ html {
   --second-color-light: #e9f2f1;
   --second-color-dark: #101b27;
 
-  --accent-color: #e9f2f1;
+  --accent-color: #9EC6C1;
 }
 
 * {
@@ -106,7 +106,7 @@ main > section > article > section > h3 {
   color: var(--second-color);
 }
 main > section > article > section > p {
-  font-size: clamp(1rem, 1.6vw, 1.5rem);
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
 }
 
 /* ---------- buttons ---------- */
@@ -115,6 +115,7 @@ main > section > article > section > p {
   padding: 1.5rem 3rem;
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 .button::before,
 .button::after {
@@ -199,35 +200,35 @@ main > section > article > section > p {
 }
 
 .button--anthe {
-	font-family: bely-display, sans-serif;
-	color: #fff;
-	background: none;
+  font-family: bely-display, sans-serif;
+  color: #fff;
+  background: none;
 }
 
 .button--anthe::before {
-	content: '';
-	background: #000;
-	-webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
-	clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
-	transition: clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1), -webkit-clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1);
+  content: "";
+  background: var(--second-color-dark);
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+  transition: clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1),
+    -webkit-clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1);
 }
 
 .button--anthe:hover::before {
-	background: #000;
-	-webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-	clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  background: var(--second-color-dark);
+  -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
 }
 
 .button--anthe span {
-	display: block;
-	mix-blend-mode: difference;
-	transition: transform 0.4s cubic-bezier(0.2, 1, 0.8, 1);
+  display: block;
+  mix-blend-mode: difference;
+  transition: transform 0.4s cubic-bezier(0.2, 1, 0.8, 1);
 }
 
 .button--anthe:hover span {
-	transform: translate3d(-10px,0,0);
+  transform: translate3d(-10px, 0, 0);
 }
-
 
 /* ---------- left and right menus ---------- */
 menu,
@@ -247,7 +248,18 @@ menu {
 
 menu > a > li:hover {
   list-style: disc;
+}
+menu > a:nth-of-type(1) > li:hover {
+  color: var(--main-color-dark);
+}
+menu > a:nth-of-type(2) > li:hover {
+  color: var(--second-color-dark);
+}
+menu > a:nth-of-type(3) > li:hover {
   color: var(--second-color);
+}
+menu > a:nth-of-type(4) > li:hover {
+  color: var(--accent-color);
 }
 
 aside {
@@ -291,17 +303,14 @@ main {
 /* ---------- main header ---------- */
 main > header {
   height: 100vh;
-  margin: 0 5vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  margin: 0 3%;
 }
 
 main > header > hgroup {
-  margin-top: 18vh;
+  margin: 18vh 15% 0;
   display: flex;
   align-items: flex-end;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 main > header > hgroup > h1 {
@@ -318,13 +327,10 @@ main > header > hgroup > h2 {
 }
 
 main > header > section {
+  margin: 0 15%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-}
-
-main > header > section > a:nth-of-type(1) {
-  width: 25vw;
+  justify-content: space-between;
 }
 
 main > header > section > p {
@@ -332,6 +338,9 @@ main > header > section > p {
 }
 
 main > header > a:nth-of-type(1) {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -339,6 +348,24 @@ main > header > a:nth-of-type(1) {
 }
 main > header > a > img {
   height: 40px;
+  -webkit-animation: yTranslation 0.5s infinite alternate ease-in-out 0s ;
+  animation: yTranslation 0.5s infinite alternate ease-in-out 0s ;
+}
+@-webkit-keyframes yTranslation {
+  from {
+    transform: translateY(-10%);
+  }
+  to {
+    transform: translateY(10%);
+  }
+}
+@keyframes yTranslation {
+  from {
+    transform: translateY(-10%);
+  }
+  to {
+    transform: translateY(10%);
+  }
 }
 
 /* ---------- works ---------- */
@@ -348,7 +375,7 @@ main > section > a > header {
   left: 0;
   top: 0;
   position: sticky;
-  width: 103%;
+  width: 106%;
   margin-left: -3%;
   height: 2.5vw;
   z-index: 2;
@@ -358,12 +385,13 @@ main > section > a > header {
 }
 
 main > section > a > header > h2 {
-  margin: 0 2vw;
+  margin: 0 4vw;
 }
 
 main > section > article {
-  height: 100vh;
+  height: 50vh;
   display: flex;
+  padding: 25vh 0;
 }
 
 main > section > article > section {
@@ -390,7 +418,7 @@ main > section > article > section > p {
 
 main > section > article > img {
   width: 35%;
-  height: 50%;
+  height: 90%;
   object-fit: cover;
   border-radius: 30px;
   mix-blend-mode: screen;
@@ -401,31 +429,20 @@ main > section > article:nth-of-type(5) > img {
 }
 
 .modal {
+  opacity: 0;
+  pointer-events: none;
+
   position: fixed;
   background-color: var(--main-color);
-
   z-index: 4;
-  width: 67%;
-  height: 67%;
-  top: 16.5%;
-  left: 16.5%;
-
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  /* Embiggen */
-  transform: scale(1.5); /* prefix me */
-
-  /* Hidden */
-  opacity: 0;
-  pointer-events: none;
-}
-
-.modal__text {
-  font-size: 12px;
-  width: 30%;
-  z-index: 6;
 }
 
 .modal__img {
@@ -433,7 +450,11 @@ main > section > article:nth-of-type(5) > img {
   mix-blend-mode: normal;
   border-radius: 0;
   height: 100%;
-  width: 40%;
+  width: 50%;
+}
+
+.modal__text {
+  width: 30%;
 }
 
 .modal__arrow {
@@ -442,4 +463,5 @@ main > section > article:nth-of-type(5) > img {
   height: 30px;
   padding: 4px 8px;
   mix-blend-mode: normal;
+  cursor: pointer;
 }
