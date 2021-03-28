@@ -11,7 +11,7 @@ html {
   --second-color-light: #e9f2f1;
   --second-color-dark: #101b27;
 
-  --accent-color: #9EC6C1;
+  --accent-color: #9ec6c1;
 }
 
 * {
@@ -83,7 +83,7 @@ main > header > hgroup > h1 {
     sans-serif;
 }
 main > header > hgroup > h2 {
-  font-size: clamp(2rem, 7vw, 2rem);
+  font-size: clamp(1rem, 4vw, 2rem);
   font-family: "LibreBaskerville", "Segoe UI Black", "Arial Rounded MT Bold",
     sans-serif;
 }
@@ -92,7 +92,7 @@ main > header section > a > button:nth-of-type(1) {
   font-weight: bold;
 }
 main > header section > p {
-  font-size: clamp(1rem, 1.2vw, 1.4rem);
+  font-size: clamp(0.9rem, 1.2vw, 1.4rem);
 }
 
 main > section > a > header > h2 {
@@ -112,7 +112,7 @@ main > section > article > section > p {
 /* ---------- buttons ---------- */
 .button {
   border: none;
-  padding: 1.5rem 3rem;
+  padding: 0.75rem 1.5rem;
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -128,7 +128,7 @@ main > section > article > section > p {
 
 .button--bestia {
   font-family: freight-display-pro, serif;
-  font-size: 1.15rem;
+  font-size: 1rem;
   color: #fff;
   background: none;
   padding: 0;
@@ -190,7 +190,7 @@ main > section > article > section > p {
 .button--bestia span {
   display: block;
   position: relative;
-  padding: 1.5rem 3rem;
+  padding: 1rem 1.5rem;
   color: var(--second-color-dark);
   font-weight: bold;
 }
@@ -230,52 +230,93 @@ main > section > article > section > p {
   transform: translate3d(-10px, 0, 0);
 }
 
+@media screen and (min-width: 540px) {
+  .button {
+    padding: 1.5rem 3rem;
+  }
+  .button::before,
+  .button::after {
+    width: 100%;
+    height: 100%;
+  }
+  .button--bestia {
+    font-size: 1.15rem;
+  }
+  .button--bestia span {
+    padding: 1.5rem 3rem;
+  }
+}
+
 /* ---------- left and right menus ---------- */
 menu,
 aside {
   height: 100vh;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: fixed;
-  z-index: 0;
+  z-index: 1;
 }
 
 menu {
-  margin-left: 3%;
+  width: 3%;
+  display: flex;
 }
 
+menu > a > li {
+  width: 8px;
+  height: 8px;
+  margin-bottom: 10px;
+  position: relative;
+  border: solid 1px var(--second-color-dark);
+  border-radius: 50%;
+  overflow: hidden;
+}
 menu > a > li:hover {
-  list-style: disc;
+  width: 12px;
+  height: 12px;
+  border: none;
 }
 menu > a:nth-of-type(1) > li:hover {
-  color: var(--main-color-dark);
+  background-color: var(--main-color-dark);
 }
 menu > a:nth-of-type(2) > li:hover {
-  color: var(--second-color-dark);
+  background-color: var(--second-color-dark);
 }
 menu > a:nth-of-type(3) > li:hover {
-  color: var(--second-color);
+  background-color: var(--second-color);
 }
 menu > a:nth-of-type(4) > li:hover {
-  color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 aside {
-  right: 0;
-  width: 3%;
-  border-left: solid 1px var(--main-color-dark);
+  display: none;
 }
-aside > a > img {
-  width: 2.3vw;
-  margin-bottom: 1vh;
+
+@media screen and (min-width: 540px) {
+  aside {
+    display: flex;
+    right: 0;
+    width: 3%;
+    border-left: solid 1px var(--main-color-dark);
+  }
+  aside > a > img {
+    width: 2.3vw;
+    margin-bottom: 1vh;
+  }
 }
 
 /* ---------- main ---------- */
 main {
-  width: 94%;
+  width: 97%;
   margin-left: 3%;
+}
+
+@media screen and (min-width: 540px) {
+  main {
+    margin-left: 3%;
+  }
 }
 
 /* ---------- SVG Morph ---------- */
@@ -290,6 +331,7 @@ main {
   align-items: center;
   justify-content: center;
   pointer-events: none;
+  z-index: 0;
 }
 
 .morph {
@@ -297,7 +339,6 @@ main {
   height: 100%;
   fill: var(--background-color-2);
   flex: none;
-  z-index: 0;
 }
 
 /* ---------- main header ---------- */
@@ -307,14 +348,14 @@ main > header {
 }
 
 main > header > hgroup {
-  margin: 18vh 15% 0;
+  margin: 18vh 5% 7vh;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
 }
 
 main > header > hgroup > h1 {
-  width: 25vw;
+  width: 60%;
 }
 
 main > header > hgroup > h1 > p {
@@ -322,25 +363,26 @@ main > header > hgroup > h1 > p {
 }
 
 main > header > hgroup > h2 {
-  width: 15vw;
-  padding: 2vh 0;
+  width: 40%;
+  padding: 1% 0;
 }
 
 main > header > section {
-  margin: 0 15%;
+  margin: 0 5%;
   display: flex;
-  align-items: center;
+  flex-direction: column-reverse;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
-main > header > section > p {
-  width: 15vw;
+main > header > section p {
+  margin: 4vh 0;
 }
 
 main > header > a:nth-of-type(1) {
   position: absolute;
   bottom: 5px;
-  left: 50%;
+  left: 44%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -348,8 +390,8 @@ main > header > a:nth-of-type(1) {
 }
 main > header > a > img {
   height: 40px;
-  -webkit-animation: yTranslation 0.5s infinite alternate ease-in-out 0s ;
-  animation: yTranslation 0.5s infinite alternate ease-in-out 0s ;
+  -webkit-animation: yTranslation 0.5s infinite alternate ease-in-out 0s;
+  animation: yTranslation 0.5s infinite alternate ease-in-out 0s;
 }
 @-webkit-keyframes yTranslation {
   from {
@@ -368,6 +410,39 @@ main > header > a > img {
   }
 }
 
+@media screen and (min-width: 540px) {
+  main > header > hgroup {
+    margin: 18vh 15% 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  main > header > hgroup > h1 {
+    width: 25vw;
+  }
+
+  main > header > hgroup > h2 {
+    width: 15vw;
+    padding: 2vh 0;
+  }
+
+  main > header > section {
+    margin: 0 15%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  main > header > section > p {
+    width: 15vw;
+  }
+
+  main > header > a:nth-of-type(1) {
+    left: 50%;
+  }
+}
+
 /* ---------- works ---------- */
 main > section > a > header {
   background-color: var(--main-color);
@@ -376,8 +451,8 @@ main > section > a > header {
   top: 0;
   position: sticky;
   width: 106%;
-  margin-left: -3%;
-  height: 2.5vw;
+  margin-left: -6%;
+  height: 5vh;
   z-index: 2;
   display: flex;
   justify-content: space-between;
@@ -389,43 +464,33 @@ main > section > a > header > h2 {
 }
 
 main > section > article {
-  height: 50vh;
+  height: 70vh;
   display: flex;
-  padding: 25vh 0;
-}
-
-main > section > article > section {
-  width: 40vw;
-  padding-top: 5vh;
-}
-main > section > article:nth-of-type(1) > section,
-main > section > article:nth-of-type(5) > section {
-  margin-left: 5vw;
-}
-main > section > article:nth-of-type(3) > section,
-main > section > article:nth-of-type(4) > section {
-  margin-left: 10vw;
-  margin-right: 5vw;
-}
-
-main > section > article > section > h3 {
-  margin-bottom: 4vh;
-}
-
-main > section > article > section > p {
-  margin-bottom: 4vh;
+  flex-direction: column;
+  padding: 15vh 5vw;
 }
 
 main > section > article > img {
-  width: 35%;
-  height: 90%;
+  width: 100%;
+  height: 35%;
   object-fit: cover;
   border-radius: 30px;
   mix-blend-mode: screen;
 }
-main > section > article:nth-of-type(1) > img,
-main > section > article:nth-of-type(5) > img {
-  margin-left: 10vw;
+main > section > article:nth-of-type(3) > img {
+  order: -1;
+}
+
+main > section > article > section {
+  width: 80vw;
+  height: 65%;
+  padding-top: 5vh;
+}
+main > section > article > section > h3 {
+  margin-bottom: 4vh;
+}
+main > section > article > section > p {
+  margin-bottom: 4vh;
 }
 
 .modal {
@@ -449,12 +514,15 @@ main > section > article:nth-of-type(5) > img {
   z-index: 5;
   mix-blend-mode: normal;
   border-radius: 0;
-  height: 100%;
-  width: 50%;
+  height: 50%;
+  width: 100%;
 }
 
 .modal__text {
-  width: 30%;
+  height: 50%;
+}
+.modal__text--1, .modal__text--3 {
+  order: -1;
 }
 
 .modal__arrow {
@@ -464,4 +532,56 @@ main > section > article:nth-of-type(5) > img {
   padding: 4px 8px;
   mix-blend-mode: normal;
   cursor: pointer;
+}
+.modal__arrow--1, .modal__arrow--3 {
+  order: -2;
+}
+
+@media screen and (min-width: 540px) {
+  main > section > a > header {
+    margin-left: -3%;
+    width: 106%;
+    height: 2.5vw;
+  }
+
+  main > section > article {
+    flex-direction: row;
+    height: 50vh;
+    padding: 25vh 0;
+  }
+
+  main > section > article > img {
+    width: 35%;
+    height: 90%;
+  }
+  main > section > article:nth-of-type(1) > img,
+  main > section > article:nth-of-type(5) > img {
+    margin-left: 10vw;
+  }
+  main > section > article:nth-of-type(3) > img {
+    order: unset;
+  }
+
+  main > section > article > section {
+    width: 40vw;
+    height: unset;
+  }
+  main > section > article:nth-of-type(1) > section,
+  main > section > article:nth-of-type(5) > section {
+    margin-left: 5vw;
+  }
+  main > section > article:nth-of-type(3) > section,
+  main > section > article:nth-of-type(4) > section {
+    margin-left: 10vw;
+    margin-right: 5vw;
+  }
+
+  .modal__img {
+    height: 100%;
+    width: 50%;
+  }
+  .modal__text {
+    width: 30%;
+    height: unset;
+  }
 }
