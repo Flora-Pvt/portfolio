@@ -10,7 +10,7 @@ const closeButtons = Array.from(document.querySelectorAll(".close-button"));
 
 banner.style.opacity = 0;
 window.addEventListener("wheel", function changeBannerVisibility() {
-  if (arrow.getBoundingClientRect().top < -300) {    
+  if (arrow.getBoundingClientRect().top < -300) {
     anime({
       targets: banner,
       opacity: 1,
@@ -29,30 +29,32 @@ window.addEventListener("wheel", function changeBannerVisibility() {
 
 for (let i = 0; i < openButtons.length; i++) {
   openButtons[i].addEventListener("click", function displayModal() {
-    anime({
-      targets: banner,
-      opacity: 0,
-      duration: 400,
-      easing: "easeInOutQuad",
-    });
+    if (i !== 0) {
+      anime({
+        targets: banner,
+        opacity: 0,
+        duration: 400,
+        easing: "easeInOutQuad",
+      });
 
-    anime({
-      targets: svg,
-      scaleX: 4.5,
-      scaleY: 3,
-      duration: 1000,
-      easing: "easeInOutQuad",
-    });
+      anime({
+        targets: svg,
+        scaleX: 4.5,
+        scaleY: 3,
+        duration: 1000,
+        easing: "easeInOutQuad",
+      });
 
-    anime({
-      targets: modals[i - 1],
-      duration: 500,
-      delay: 800,
-      easing: "easeInOutQuad",      
-      opacity: 1,
-    });
+      anime({
+        targets: modals[i - 1],
+        duration: 500,
+        delay: 800,
+        easing: "easeInOutQuad",
+        opacity: 1,
+      });
 
-    modals[i - 1].style.pointerEvents = "all"
+      modals[i - 1].style.pointerEvents = "all";
+    }
   });
 }
 
@@ -61,18 +63,29 @@ for (let i = 0; i < closeButtons.length; i++) {
     anime({
       targets: modals[i],
       duration: 500,
-      easing: "easeInOutQuad",      
+      easing: "easeInOutQuad",
       opacity: 0,
     });
 
-    anime({
-      targets: svg,
-      scaleX: 1,
-      scaleY: 1,
-      duration: 1000,
-      delay: 200,
-      easing: "easeInOutQuad",
-    });
+    if (window.innerWidth <= 540) {
+      anime({
+        targets: svg,
+        scaleX: 0.5,
+        scaleY: 0.5,
+        duration: 1000,
+        delay: 200,
+        easing: "easeInOutQuad",
+      });
+    } else {
+      anime({
+        targets: svg,
+        scaleX: 1,
+        scaleY: 1,
+        duration: 1000,
+        delay: 200,
+        easing: "easeInOutQuad",
+      });
+    }
 
     anime({
       targets: banner,
@@ -82,6 +95,6 @@ for (let i = 0; i < closeButtons.length; i++) {
       easing: "easeInOutQuad",
     });
 
-    modals[i ].style.pointerEvents = "none"
+    modals[i].style.pointerEvents = "none";
   });
 }

@@ -255,28 +255,39 @@ aside {
   justify-content: center;
   align-items: center;
   position: fixed;
-  z-index: 0;
+  z-index: 1;
 }
 
 menu {
-  margin-left: 6%;
+  margin-left: 3%;
   display: flex;
 }
 
+menu > a > li {
+  width: 8px;
+  height: 8px;
+  margin-bottom: 10px;
+  position: relative;
+  border: solid 1px var(--second-color-dark);
+  border-radius: 50%;
+  overflow: hidden;
+}
 menu > a > li:hover {
-  list-style: disc;
+  width: 12px;
+  height: 12px;
+  border: none;
 }
 menu > a:nth-of-type(1) > li:hover {
-  color: var(--main-color-dark);
+  background-color: var(--main-color-dark);
 }
 menu > a:nth-of-type(2) > li:hover {
-  color: var(--second-color-dark);
+  background-color: var(--second-color-dark);
 }
 menu > a:nth-of-type(3) > li:hover {
-  color: var(--second-color);
+  background-color: var(--second-color);
 }
 menu > a:nth-of-type(4) > li:hover {
-  color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 aside {
@@ -284,9 +295,6 @@ aside {
 }
 
 @media screen and (min-width: 540px) {
-  menu {
-    margin-left: 3%;
-  }
   aside {
     display: flex;
     right: 0;
@@ -301,7 +309,7 @@ aside {
 
 /* ---------- main ---------- */
 main {
-  width: 94%;
+  width: 97%;
   margin-left: 6%;
 }
 
@@ -323,6 +331,7 @@ main {
   align-items: center;
   justify-content: center;
   pointer-events: none;
+  z-index: 0;
 }
 
 .morph {
@@ -330,7 +339,6 @@ main {
   height: 100%;
   fill: var(--background-color-2);
   flex: none;
-  z-index: 0;
 }
 
 /* ---------- main header ---------- */
