@@ -259,7 +259,7 @@ aside {
 }
 
 menu {
-  margin-left: 3%;
+  width: 3%;
   display: flex;
 }
 
@@ -310,7 +310,7 @@ aside {
 /* ---------- main ---------- */
 main {
   width: 97%;
-  margin-left: 6%;
+  margin-left: 3%;
 }
 
 @media screen and (min-width: 540px) {
