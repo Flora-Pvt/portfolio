@@ -199,7 +199,7 @@
 
   const initShapeEl = function () {
     anime.remove(DOM.svg);
-    if (window.innerWidth <= 540) {
+    if (window.innerWidth <= 768) {
       anime({
         targets: DOM.svg,
         duration: 1,
@@ -252,7 +252,7 @@
         });
 
         anime.remove(DOM.svg);
-        if (window.innerWidth <= 540) {
+        if (window.innerWidth <= 768) {
           anime({
             targets: DOM.svg,
             duration: shapes[pos].animation.svg.duration,
@@ -302,7 +302,7 @@
           });
 
           anime.remove(DOM.svg);
-          if (window.innerWidth <= 540) {
+          if (window.innerWidth <= 768) {
             anime({
               targets: DOM.svg,
               duration: shapes[idx].animation.svg.duration,
